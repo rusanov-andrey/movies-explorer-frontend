@@ -1,0 +1,10 @@
+
+.about-main__subtitle {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 23px;
+
+  border-bottom: 1px solid var(--color-dark);
+
+  font: 400 22px/1.2 Inter;
+}

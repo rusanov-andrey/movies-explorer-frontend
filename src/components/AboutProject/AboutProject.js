@@ -1,9 +1,11 @@
+import AboutMainSubtitle from '../AboutMainSubtitle/AboutMainSubtitle'
+
 import './AboutProject.css'
 
 export  default function AboutProject() {
   return (
     <div className='about-project'>
-      <div className='about-project__title'>О проекте</div>
+      <AboutMainSubtitle text="О проекте"/>
       <div className='about-project__description-container'>
         <p className='about-project__item-title'>Дипломный проект включал 5 этапов</p>
         <p className='about-project__item-title'>На выполнение диплома ушло 5 недель</p>
