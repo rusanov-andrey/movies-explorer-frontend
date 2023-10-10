@@ -5,7 +5,7 @@ import author_photo from "../../images/author.png"
 
 export  default function AboutMe() {
   return (
-    <div className='aboutme'>
+    <section className='aboutme'>
       <AboutMainSubtitle text="Студент"/>
       <div className='aboutme__container'>
         <div className='aboutme__info-container'>
@@ -19,6 +19,6 @@ export  default function AboutMe() {
         </div>
         <img className='aboutme__photo' src={author_photo} alt="Фотография автора"/>
       </div>
-    </div>
+    </section>
   );
 }

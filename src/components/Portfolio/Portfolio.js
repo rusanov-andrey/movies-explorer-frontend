@@ -2,7 +2,7 @@ import './Portfolio.css'
 
 export  default function Portfolio() {
   return (
-    <div className='portfolio'>
+    <section className='portfolio'>
       <h2 className='portfolio__title'>Портфолио</h2>
       <div  className='portfolio__container'>
         <div className='portfolio__item'>
@@ -18,6 +18,6 @@ export  default function Portfolio() {
           <a className='portfolio__site' href="#">↗</a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

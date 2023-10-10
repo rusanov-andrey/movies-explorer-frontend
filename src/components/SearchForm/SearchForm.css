@@ -1,0 +1,40 @@
+.search-form {
+  margin: 0;
+  padding: 70px 70px 47px;
+
+}
+
+.search-form__input-container {
+  margin: 0 0 32px;
+  padding: 0 0 11px;
+
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
+}
+
+.search-form__input {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  font: 500 28px Inter;
+
+  flex: 1;
+}
+
+.search-form__button {
+  margin: 0;
+  padding: 8px 10px;
+
+  border-radius: 17px;
+  min-height: 34px;
+
+  background-color: rgba(52, 86, 243, 1);
+  color: white;
+  font: 400 11px/1.2 Inter;
+}

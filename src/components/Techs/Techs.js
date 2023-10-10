@@ -4,7 +4,7 @@ import './Techs.css'
 
 export  default function Techs() {
   return (
-    <div className='about-techs'>
+    <section className='about-techs'>
       <AboutMainSubtitle text="Технологии"/>
       <div className='about-techs__container'>
         <p className='about-techs__big-text'>7 технологий</p>
@@ -19,6 +19,6 @@ export  default function Techs() {
           <div className='about-techs__tech-item'>mongoDB</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
