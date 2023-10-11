@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Routes, Navigate, useNavigate } from 'react-router
 
 import AboutMain from '../AboutMain/AboutMain';
 import Movies from '../Movies/Movies';
+import SavedMovies from '../SavedMovies/SavedMovies';
 
 import './App.css';
 
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<AboutMain/>} />
           <Route path='/movies' element={<Movies/>} />
+          <Route path='/saved-movies' element={<SavedMovies/>} />
         </Routes>
       </BrowserRouter>
     </div>
