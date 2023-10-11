@@ -1,0 +1,69 @@
+.card {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.card__image {
+  margin: 0;
+  padding: 0;
+  
+  object-fit: cover;
+
+  width: 100%;
+}
+
+.card__info {
+  margin: 10px 0 25px;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__title {
+  margin: 0;
+  padding: 0;
+
+  max-height: 24px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  font: 500 13px/1.2 Inter;
+}
+
+.card__heart {
+  margin: 0;
+  padding: 0;
+
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+
+  background-image: url(../../images/unliked.png);
+}
+
+.card__heart_liked {
+  background-image: url(../../images/liked.png);
+}
+
+.card__duration {
+  margin: 0;
+  padding: 6px 0 10px;
+
+  display: block;
+
+  color: rgba(160, 160, 160, 1);
+
+  border-top: 1px solid rgba(160, 160, 160, 1);
+
+  font: 500 13px/1.2 Inter;
+}

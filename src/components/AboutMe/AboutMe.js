@@ -1,12 +1,12 @@
 import AboutMainSubtitle from '../AboutMainSubtitle/AboutMainSubtitle'
 
 import './AboutMe.css'
-import author_photo from "../../images/author.png"
+import author_photo from '../../images/author.png'
 
 export  default function AboutMe() {
   return (
     <section className='aboutme'>
-      <AboutMainSubtitle text="Студент"/>
+      <AboutMainSubtitle text='Студент'/>
       <div className='aboutme__container'>
         <div className='aboutme__info-container'>
           <div className='aboutme__info'>
@@ -15,9 +15,9 @@ export  default function AboutMe() {
             <div className='aboutme__long'>Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена 
 и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.</div>
           </div>
-          <a className='aboutme__link' href="https://github.com/ivanov">Github</a>
+          <a className='aboutme__link' href='https://github.com/ivanov'>Github</a>
         </div>
-        <img className='aboutme__photo' src={author_photo} alt="Фотография автора"/>
+        <img className='aboutme__photo' src={author_photo} alt='Фотография автора'/>
       </div>
     </section>
   );

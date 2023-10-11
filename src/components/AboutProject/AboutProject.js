@@ -5,7 +5,7 @@ import './AboutProject.css'
 export  default function AboutProject() {
   return (
     <section className='about-project'>
-      <AboutMainSubtitle text="О проекте"/>
+      <AboutMainSubtitle text='О проекте'/>
       <div className='about-project__description-container'>
         <p className='about-project__item-title'>Дипломный проект включал 5 этапов</p>
         <p className='about-project__item-title'>На выполнение диплома ушло 5 недель</p>

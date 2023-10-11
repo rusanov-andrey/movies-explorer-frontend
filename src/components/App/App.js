@@ -11,8 +11,8 @@ function App() {
     <div className='app-container'>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<AboutMain/>} />
-          <Route path="/movies" element={<Movies/>} />
+          <Route path='/' element={<AboutMain/>} />
+          <Route path='/movies' element={<Movies/>} />
         </Routes>
       </BrowserRouter>
     </div>

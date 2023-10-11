@@ -5,7 +5,7 @@ import './Techs.css'
 export  default function Techs() {
   return (
     <section className='about-techs'>
-      <AboutMainSubtitle text="Технологии"/>
+      <AboutMainSubtitle text='Технологии'/>
       <div className='about-techs__container'>
         <p className='about-techs__big-text'>7 технологий</p>
         <p className='about-techs__small-text'>На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
