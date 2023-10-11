@@ -69,13 +69,14 @@
   font: 500 14px/1.2 Inter;
 }
 
-.AAA {
+.aboutme__photo {
   margin: 0;
+  margin-left: 20px;
   padding: 0;
-}
 
-.AAA {
-  margin: 0;
-  padding: 0;
-}
+  object-fit: contain;
+  object-position: center;
 
+  width: 270px;
+  height: 327px;
+}
