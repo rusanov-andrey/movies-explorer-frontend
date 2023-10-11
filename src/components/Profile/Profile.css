@@ -1,0 +1,144 @@
+.profile {
+  margin: 0;
+  padding: 50px;
+  box-sizing: border-box;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+.profile__container{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 410px;
+  width: 100%;
+}
+
+.profile__title {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font: 500 24px/1.2 Inter;
+}
+
+.profile__info {
+  margin: 0;
+  padding: 106px 0 0;
+  box-sizing: border-box;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+.profile__info-item {
+  margin: 0;
+  padding: 17px 0;
+  box-sizing: border-box;
+
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
+
+  width: 100%;
+}
+.profile__info-item:last-of-type {
+  border: none;
+}
+
+.profile__info-title {
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+  box-sizing: border-box;
+
+  font: 500 11px/1.2 Inter;
+}
+
+.profile__info-data {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font: 400 11px/1.2 Inter;
+}
+
+.profile__edit-button {
+  margin: 203px 0 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background: none;
+  border: none;
+  outline: none;
+
+  font: 400 11px/1.2 Inter;
+
+  cursor: pointer;
+}
+
+.profile__exit-button {
+  margin: 16px 0 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background: none;
+  border: none;
+  outline: none;
+
+  color: rgba(255, 0, 77, 1);
+  font: 400 11px/1.2 Inter;
+
+  cursor: pointer;
+}
+
+.profile__save-button {
+  margin: 203px 0 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 45px;
+
+  background: rgba(52, 86, 243, 1);
+  border: none;
+  outline: none;
+
+  color: white;
+  font: 400 14px/1.2 Inter;
+
+  cursor: pointer;
+}
+
+.profile__info-editor {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  flex-grow: 1;
+
+  border: none;
+  outline: none;
+
+  font: 400 11px/1.2 Inter;
+
+  text-align: end;
+}

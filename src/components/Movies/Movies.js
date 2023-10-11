@@ -8,7 +8,7 @@ export  default function Movies() {
   return (
     <div className='movies'>
       <SearchForm />
-      <MoviesCardList />
+      <MoviesCardList saved={false}/>
       {false && <Preloader />}
     </div>
   );

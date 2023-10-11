@@ -67,3 +67,22 @@
 
   font: 500 13px/1.2 Inter;
 }
+
+.card__del {
+  margin: 0;
+  padding: 0;
+
+  width: 24px;
+  height: 24px;
+
+  background-image: url(../../images/del.png);
+
+  opacity: 0;
+
+  transition: opacity 0.2s linear;
+}
+
+.card:hover  .card__del {
+  opacity: 1;
+  cursor: pointer;
+}
