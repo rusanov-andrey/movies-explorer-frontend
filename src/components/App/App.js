@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Routes, Navigate, useNavigate } from 'react-router
 import PageAbout from '../PageAbout/PageAbout';
 import PageMovies from '../PageMovies/PageMovies';
 import PageSavedMovies from '../PageSavedMovies/PageSavedMovies';
-import Profile from '../Profile/Profile';
+import PageProfile from '../PageProfile/PageProfile';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
 import NotFound  from '../NotFound/NotFound';
@@ -19,7 +19,7 @@ function App() {
           <Route path='/' element={<PageAbout/>} />
           <Route path='/movies' element={<PageMovies/>} />
           <Route path='/saved-movies' element={<PageSavedMovies/>} />
-          <Route path='/profile' element={<Profile/>} />
+          <Route path='/profile' element={<PageProfile/>} />
           <Route path='/signup' element={<Register/>} />
           <Route path='/signin' element={<Login/>} />
           <Route path='*' element={<NotFound/>} />
