@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 
-import AboutMain from '../AboutMain/AboutMain';
-import Movies from '../Movies/Movies';
-import SavedMovies from '../SavedMovies/SavedMovies';
+import PageAbout from '../PageAbout/PageAbout';
+import PageMovies from '../PageMovies/PageMovies';
+import PageSavedMovies from '../PageSavedMovies/PageSavedMovies';
 import Profile from '../Profile/Profile';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
@@ -16,9 +16,9 @@ function App() {
     <div className='app-container'>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<AboutMain/>} />
-          <Route path='/movies' element={<Movies/>} />
-          <Route path='/saved-movies' element={<SavedMovies/>} />
+          <Route path='/' element={<PageAbout/>} />
+          <Route path='/movies' element={<PageMovies/>} />
+          <Route path='/saved-movies' element={<PageSavedMovies/>} />
           <Route path='/profile' element={<Profile/>} />
           <Route path='/signup' element={<Register/>} />
           <Route path='/signin' element={<Login/>} />
