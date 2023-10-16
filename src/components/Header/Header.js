@@ -22,13 +22,13 @@ export default function Header({authorized, darkTheme, short}) {
   }
 
   return (
-    <header className= {'header ' + (darkTheme ? 'header_dark' : '')}>
+    <header className= {'header ' + (darkTheme ? 'header_dark ' : '') + (short ? 'header_short' : '')}>
       <Link className='header__logo-link' to='/'>
         <div className='header__logo' />
       </Link>
-      { authorized && <NavigationBar darkTheme={darkTheme}/> }
-      { authorized && renderAccauntInfo()}
-      { !authorized && renderEntranceLinks()}
+      { !short && authorized && <NavigationBar darkTheme={darkTheme}/> }
+      { !short && authorized && renderAccauntInfo()}
+      { !short && !authorized && renderEntranceLinks()}
     </header>
   );
 }

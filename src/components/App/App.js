@@ -5,8 +5,8 @@ import PageAbout from '../PageAbout/PageAbout';
 import PageMovies from '../PageMovies/PageMovies';
 import PageSavedMovies from '../PageSavedMovies/PageSavedMovies';
 import PageProfile from '../PageProfile/PageProfile';
-import Register from '../Register/Register';
-import Login from '../Login/Login';
+import PageRegister from '../PageRegister/PageRegister';
+import PageLogin from '../PageLogin/PageLogin';
 import NotFound  from '../NotFound/NotFound';
 
 import './App.css';
@@ -20,8 +20,8 @@ function App() {
           <Route path='/movies' element={<PageMovies/>} />
           <Route path='/saved-movies' element={<PageSavedMovies/>} />
           <Route path='/profile' element={<PageProfile/>} />
-          <Route path='/signup' element={<Register/>} />
-          <Route path='/signin' element={<Login/>} />
+          <Route path='/signup' element={<PageRegister/>} />
+          <Route path='/signin' element={<PageLogin/>} />
           <Route path='*' element={<NotFound/>} />
         </Routes>
       </BrowserRouter>

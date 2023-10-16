@@ -10,6 +10,9 @@
 .header_dark {
   background-color: rgba(7, 48, 66, 1);
 }
+.header_short {
+  padding-top: 70px;
+}
 
 .header__logo-link {
   margin: 0;
