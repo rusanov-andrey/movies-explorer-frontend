@@ -55,6 +55,11 @@
   font: 500 14px/1.2 Inter;
 
   align-self: center;
+
+  cursor: pointer;
+}
+.hello-form__submit:hover {
+  opacity: 0.8;
 }
 
 .hello-form__info {
@@ -75,4 +80,7 @@
 
   font: 400 14px/1.2 Inter;
   color: rgba(52, 86, 243, 1);
+}
+.hello-form__link:hover {
+  opacity: 0.7;
 }

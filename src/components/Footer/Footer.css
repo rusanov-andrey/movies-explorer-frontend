@@ -53,10 +53,15 @@
   padding: 0 10px 0;
   box-sizing: border-box;
 
+  color: black;
+  text-decoration: none;
 }
 .footer__link:first-child {
   padding: 0 5px 0 0;
 }
 .footer__link:last-child {
   padding: 0 0px 0 5px;
+}
+.footer__link:hover {
+  opacity: 0.7;
 }

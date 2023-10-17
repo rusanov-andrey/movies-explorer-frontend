@@ -94,6 +94,9 @@
 
   cursor: pointer;
 }
+.profile__edit-button:hover {
+  opacity: 0.7;
+}
 
 .profile__exit-button {
   margin: 16px 0 0;
@@ -108,6 +111,9 @@
   font: 400 11px/1.2 Inter;
 
   cursor: pointer;
+}
+.profile__exit-button:hover {
+  opacity: 0.7;
 }
 
 .profile__save-button {
@@ -126,6 +132,9 @@
   font: 400 14px/1.2 Inter;
 
   cursor: pointer;
+}
+.profile__save-button:hover {
+  opacity: 0.8;
 }
 
 .profile__info-editor {

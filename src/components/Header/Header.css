@@ -19,6 +19,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.header__logo-link:hover {
+  opacity: 0.8;
+}
 
 .header__logo {
   margin: 0;
@@ -61,6 +64,9 @@
 .header__account-button_accent {
   background-color: var(--color-accent);
 }
+.header__account-button:hover {
+  opacity: 0.8;
+}
 
 .header__account-text {
   margin: 0;
@@ -94,6 +100,9 @@
   font: 500 12px/1.2 Inter;
   text-decoration: none;
 }
+.header__registration-link:hover {
+  opacity: 0.7;
+}
 
 .header__entrance-link {
   margin: 0;
@@ -111,4 +120,7 @@
   text-decoration: none;
   color: black;
   text-align: center;
+}
+.header__entrance-link:hover {
+  opacity: 0.8;
 }

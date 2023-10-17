@@ -68,6 +68,9 @@
 
   font: 500 14px/1.2 Inter;
 }
+.aboutme__link:hover {
+  opacity: 0.7;
+}
 
 .aboutme__photo {
   margin: 0;

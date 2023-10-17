@@ -51,3 +51,6 @@
   font: 400 14px/1.2 Inter;
   cursor: pointer;
 }
+.notfound__back:hover {
+  opacity: 0.7;
+}

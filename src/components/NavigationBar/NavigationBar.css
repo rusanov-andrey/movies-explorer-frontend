@@ -28,6 +28,9 @@
 .navigation-bar__link_dark {
   color: white;
 }
+.navigation-bar__link:hover {
+  opacity: 0.7;
+}
 
 .navigation-bar__text {
   margin: 0;
@@ -41,4 +44,7 @@
 }
 .navigation-bar__text_dark {
   color: white;
+}
+.navigation-bar__text:hover {
+  opacity: 0.7;
 }
