@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  min-height: 460px;
+  min-height: 482px;
 }
 
 .hello-form__field-container {
@@ -46,15 +46,15 @@
   padding: 0;
   box-sizing: border-box;
 
-  width: 396px;
+  display: block;
+
+  align-self: stretch;
   min-height: 49px;
 
   color: white;
   background-color: rgba(52, 86, 243, 1);
 
   font: 500 14px/1.2 Inter;
-
-  align-self: center;
 
   cursor: pointer;
 }

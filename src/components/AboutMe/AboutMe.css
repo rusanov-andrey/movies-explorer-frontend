@@ -1,6 +1,6 @@
 .aboutme {
   margin: 0;
-  padding: 110px 70px;
+  padding: 110px 70px 100px;
 
   background-color: var(--color-light);
 }
@@ -38,7 +38,8 @@
   margin: 0;
   padding: 0;
 
-  font: 400 50px/1.2 Inter;
+  font: 400 50px/58px Inter;
+  letter-spacing: -0.04em;
 }
 
 .aboutme__short {
@@ -54,7 +55,7 @@
   padding: 0;
   padding-top: 26px;
 
-  font: 400 14px/1.2 Inter;
+  font: 400 14px/22px Inter;
 
   max-width: 600px;
 }

@@ -1,6 +1,6 @@
 .profile {
   margin: 0;
-  padding: 50px;
+  padding: 74px 50px;
   box-sizing: border-box;
 
   display: flex;
@@ -90,7 +90,7 @@
   border: none;
   outline: none;
 
-  font: 400 11px/1.2 Inter;
+  font: 400 13px/1.2 Inter;
 
   cursor: pointer;
 }
@@ -108,7 +108,7 @@
   outline: none;
 
   color: rgba(255, 0, 77, 1);
-  font: 400 11px/1.2 Inter;
+  font: 400 13px/1.2 Inter;
 
   cursor: pointer;
 }

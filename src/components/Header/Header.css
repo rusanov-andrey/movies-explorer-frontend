@@ -11,7 +11,9 @@
   background-color: rgba(7, 48, 66, 1);
 }
 .header_short {
-  padding-top: 70px;
+  margin: 0 auto 0;
+  padding: 70px 0 0;
+  width: 460px
 }
 
 .header__logo-link {

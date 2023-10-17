@@ -1,6 +1,7 @@
 .portfolio {
   margin: 0;
   padding: 0 70px 110px;
+  box-sizing: border-box;
 
   background-color: var(--color-light);
 }
@@ -8,6 +9,7 @@
 .portfolio__title {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   font: 400 18px/1.2 Inter;
 
@@ -16,17 +18,21 @@
 
 .portfolio__container {
   margin: 0;
-  padding: 0;
+  padding: 30px 0 0;
+  box-sizing: border-box;
 
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 89px;
   grid-auto-rows: 89px;
+
+  align-content: center;
 }
 
 .portfolio__item {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   display: flex;
   position: relative;
@@ -41,13 +47,19 @@
 .portfolio__site {
   margin: 0;
   padding: 20px 0;
+  box-sizing: border-box;
 
   text-decoration: none;
   color: var(--color-dark);
 
   font: 400 30px/50px Inter;
+  letter-spacing: -0.04em;
 }
 
 .portfolio__item:last-of-type {
   border: none;
+}
+
+.portfolio__site_arrow {
+  line-height: 60px;
 }

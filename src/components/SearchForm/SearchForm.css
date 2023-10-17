@@ -35,6 +35,8 @@
   min-height: 34px;
   border: none;
 
+  min-width: 58px;
+
   background-color: rgba(52, 86, 243, 1);
   color: white;
   font: 400 11px/1.2 Inter;

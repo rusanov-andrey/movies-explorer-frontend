@@ -1,6 +1,7 @@
 .about-techs {
   margin: 0;
   padding: 100px 70px;
+  box-sizing: border-box;
 
   background-color: var(--color-medium);
 }
@@ -8,6 +9,7 @@
 .about-techs__container {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   display: flex;
   position: relative;
@@ -20,16 +22,19 @@
   margin: 0;
   margin-top: 90px;
   padding: 0;
+  box-sizing: border-box;
 
-  font: 400 50px/1.2 Inter;
+  font: 400 50px/58px Inter;
+  letter-spacing: -0.04em;
 }
 
 .about-techs__small-text {
   margin: 0;
   margin-top: 26px;
   padding: 0;
+  box-sizing: border-box;
 
-  font: 400 14px/1.5 Inter;
+  font: 400 14px/20px Inter;
 
   max-width: 460px;
   text-align: center;
@@ -39,17 +44,19 @@
   margin: 0;
   margin-top: 100px;
   padding: 0;
+  box-sizing: border-box;
 
   display: grid;
   position: relative;
 
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, 90px);
   gap: 0 10px;
 }
 
 .about-techs__tech-item {
   margin: 0;
   padding: 21px 14px;
+  box-sizing: border-box;
 
   background-color: rgba(232, 232, 232, 1);
 
@@ -57,4 +64,5 @@
   text-align: center;
 
   border-radius: 10px;
+  border-width: 0;
 }
