@@ -12,7 +12,9 @@ export  default function SearchForm() {
         <input className='search-form__input' type='text' placeholder='Фильм'/>
         <button className='search-form__button'>Найти</button>
       </div>
-      <FilterCheckbox value={shortTime} setValue={setShortTime} label='Короткометражки'/>
+      <div className='search-form__filter-container'>
+        <FilterCheckbox value={shortTime} setValue={setShortTime} label='Короткометражки'/>
+      </div>
     </form>
   );
 }

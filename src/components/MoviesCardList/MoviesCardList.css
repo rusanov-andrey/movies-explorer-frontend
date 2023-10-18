@@ -1,6 +1,6 @@
 .cardlist {
   margin: 0;
-  padding: 70px 70px 80px;
+  padding: 70px 70px 10px;
 
   box-sizing: border-box;
   width: 100%;
@@ -46,4 +46,36 @@
 }
 .cardlist__more:hover {
   opacity: 0.8;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .cardlist {
+    padding: 70px 50px 10px;
+  }
+
+  .cardlist__container {
+    grid-template-columns: repeat(3, calc((100% - 2*var(--gap_x))/3));
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .cardlist {
+    padding: 70px 30px 10px;
+  }
+
+  .cardlist__container {
+    grid-template-columns: repeat(2, calc((100% - 1*var(--gap_x))/2));
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .cardlist {
+    padding: 40px 10px 10px;
+  }
+  .cardlist__container {
+    grid-template-columns: calc(100%);
+  }
 }
