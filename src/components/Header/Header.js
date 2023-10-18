@@ -1,9 +1,12 @@
+import React from "react";
 import NavigationBar from '../NavigationBar/NavigationBar';
 import { Link } from 'react-router-dom';
 
 import './Header.css'
 
 export default function Header({authorized, darkTheme, short}) {
+  const menuRef = React.useRef();
+
   function renderAccauntInfo() {
     return (
       <div className='header__link-container'>
@@ -21,14 +24,25 @@ export default function Header({authorized, darkTheme, short}) {
     );
   }
 
+  function handleMenuClick(evt) {
+    console.log('AAA');
+    menuRef.current.classList.toggle('neader__navigation-bar_short_visible');
+  }
+
   return (
     <header className= {'header ' + (darkTheme ? 'header_dark ' : '') + (short ? 'header_short' : '')}>
       <Link className='header__logo-link' to='/'>
         <div className='header__logo' />
       </Link>
-      { !short && authorized && <NavigationBar darkTheme={darkTheme}/> }
+      <div className='neader__navigation-bar neader__navigation-bar_long'>
+        { !short && authorized && <NavigationBar darkTheme={darkTheme}/> }
+      </div>
       { !short && authorized && renderAccauntInfo()}
       { !short && !authorized && renderEntranceLinks()}
+      { authorized && <div className={'header__menu-button ' + (darkTheme ? 'header__menu-button_dark' : '')} onClick={handleMenuClick}>≡</div> }
+      <div ref={menuRef} className='neader__navigation-bar neader__navigation-bar_short'>
+        <NavigationBar darkTheme={darkTheme}/>
+      </div>
     </header>
   );
 }

@@ -99,7 +99,7 @@
   box-sizing: border-box;
 
   color: white;
-  font: 500 12px/1.2 Inter;
+  font: 500 12px/16px Inter;
   text-decoration: none;
 }
 .header__registration-link:hover {
@@ -125,4 +125,101 @@
 }
 .header__entrance-link:hover {
   opacity: 0.8;
+}
+
+.neader__navigation-bar {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.neader__navigation-bar_long {
+  display: flex;
+}
+.neader__navigation-bar_short {
+  display: none;
+  z-index: 1;
+  top: 70px;
+}
+
+.header__menu-button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: none;
+
+  font: 900 40px/40px Inter;
+
+  cursor: pointer;
+}
+.header__menu-button:hover {
+  opacity: 0.7;
+}
+.header__menu-button_dark {
+  color: white;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .header {
+    padding: 18px 50px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 18px 30px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 18px 10px;
+  }
+
+  .neader__navigation-bar_long {
+    display: none;
+  }
+
+  .neader__navigation-bar_short {
+    display: block;
+    opacity: 0;
+
+    transition: opacity 0.5s linear;
+  }
+
+  .neader__navigation-bar_short_visible {
+    opacity: 1;
+  }
+
+  .header__registration-link {
+    margin-right: 14px;
+    font: 500 10px/16px Inter;
+  }
+
+  .header__entrance-link {
+    font: 500 10px/16px Inter;
+    width: 56px;
+    min-height: 26px;
+  }
+
+  .header__menu-button {
+    display: block;
+  }
+
+  .header__account-button {
+    display: none;
+  }
 }

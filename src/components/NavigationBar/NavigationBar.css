@@ -3,12 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +33,7 @@
   text-decoration: none;
   color: black;
 
-  font: 400 13px/18px Inter;
+  font: 400 14px/18px Inter;
 
 }
 .navigation-bar__link_dark {
@@ -57,11 +51,17 @@
   text-decoration: none;
   color: black;
 
-  font: 500 13px/18px Inter;
+  font: 500 14px/18px Inter;
 }
 .navigation-bar__text_dark {
   color: white;
 }
 .navigation-bar__text:hover {
   opacity: 0.7;
+}
+
+@media screen and (max-width: 500px) {
+  .navigation-bar__text {
+    text-decoration: underline;
+  }
 }
