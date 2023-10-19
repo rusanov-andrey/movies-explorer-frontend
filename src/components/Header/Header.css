@@ -149,6 +149,12 @@
   display: none;
   z-index: 1;
   top: 70px;
+  bottom: unset;
+  left: 10px;
+  right: 10px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
+
+  background-color: white;
 }
 
 .header__menu-button {
@@ -174,12 +180,23 @@
   .header {
     padding: 18px 50px;
   }
+
+  .header_short {
+    width: 430px;
+    padding: 70px 0 0;  }
 }
 
 
 @media screen and (max-width: 800px) {
   .header {
     padding: 18px 30px;
+  }
+
+  .header_short {
+    width: 396px;
+    padding-top: 232px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -188,6 +205,11 @@
   .header {
     padding: 18px 10px;
   }
+  
+  .header_short {
+    justify-content: center;
+    width: unset;
+    padding-top: 56px;  }
 
   .neader__navigation-bar_long {
     display: none;

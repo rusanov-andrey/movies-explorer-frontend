@@ -55,3 +55,29 @@
 .notfound__back:hover {
   opacity: 0.7;
 }
+
+
+@media screen and (max-width: 1000px) {
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .notfound__title  {
+    font: 400 80px/1.2 Inter;
+  }
+  
+  .notfound__message {
+    font: 400 12px/1.2 Inter;
+  }
+  
+  .notfound__back {
+    margin: 184px 0 0;
+    font: 400 12px/1.2 Inter;
+  }  
+}
