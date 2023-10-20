@@ -51,7 +51,7 @@ export default function Header({authorized, darkTheme, short}) {
             <button className='header__navigation-bar-close' onClick={handleCloseClick}></button>
             <NavigationBar linkInfo={[{addr: '/', text: 'Главная'}, ...linkInfo]} darkTheme={darkTheme}/>
           </div>
-          <Link className={'header__account-button header__account-button_navigation ' + (darkTheme ? 'header__account-button_accent' : '')} to='/profile'><span className='header__account-text'>Аккаунт</span><div className='header__account-icon'></div></Link>
+          <Link className={'header__account-button header__account-button_navigation'} to='/profile'><span className='header__account-text'>Аккаунт</span><div className='header__account-icon'></div></Link>
         </div>
       </div>
     </header>
