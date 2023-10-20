@@ -60,6 +60,36 @@
   opacity: 0.7;
 }
 
+
+@media screen and (max-width: 800px) {
+  .navigation-bar__menu {
+    display: grid;
+    position: relative;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    grid-auto-columns: unset;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    column-gap: unset;
+    row-gap: 16px;
+    justify-items: left;
+    align-items:  center;
+  
+  }
+
+  .navigation-bar__text {
+    text-decoration: underline;
+  }
+
+  .navigation-bar__link_dark {
+    color: black;
+  }
+  .navigation-bar__text_dark {
+    color: black;
+  }
+}
+
+
 @media screen and (max-width: 500px) {
   .navigation-bar__menu {
     display: grid;

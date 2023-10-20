@@ -27,7 +27,11 @@ export default function Header({authorized, darkTheme, short}) {
   }
 
   function handleMenuClick(evt) {
-    menuRef.current.classList.toggle('neader__navigation-bar_short_visible');
+    menuRef.current.classList.add('header__navigation-bar-popup_visible');
+  }
+
+  function handleCloseClick(evt) {
+    menuRef.current.classList.remove('header__navigation-bar-popup_visible');
   }
 
   return (
@@ -35,14 +39,20 @@ export default function Header({authorized, darkTheme, short}) {
       <Link className='header__logo-link' to='/'>
         <div className='header__logo' />
       </Link>
-      <div className='neader__navigation-bar neader__navigation-bar_long'>
+      <div className='header__navigation-bar header__navigation-bar_long'>
         { !short && authorized && <NavigationBar linkInfo={linkInfo} darkTheme={darkTheme}/> }
       </div>
       { !short && authorized && renderAccauntInfo()}
       { !short && !authorized && renderEntranceLinks()}
       { authorized && <div className={'header__menu-button ' + (darkTheme ? 'header__menu-button_dark' : '')} onClick={handleMenuClick}>≡</div> }
-      <div ref={menuRef} className='neader__navigation-bar neader__navigation-bar_short'>
-        <NavigationBar linkInfo={[{addr: '/', text: 'Главная'}, ...linkInfo, {addr: '/profile', text: 'Аккаунт'}]} darkTheme={darkTheme}/>
+      <div ref={menuRef} className='header__navigation-bar-popup'>
+        <div className='header__navigation-bar-overlay'>
+          <div className='header__navigation-bar-group'>
+            <button className='header__navigation-bar-close' onClick={handleCloseClick}></button>
+            <NavigationBar linkInfo={[{addr: '/', text: 'Главная'}, ...linkInfo]} darkTheme={darkTheme}/>
+          </div>
+          <Link className={'header__account-button header__account-button_navigation ' + (darkTheme ? 'header__account-button_accent' : '')} to='/profile'><span className='header__account-text'>Аккаунт</span><div className='header__account-icon'></div></Link>
+        </div>
       </div>
     </header>
   );
