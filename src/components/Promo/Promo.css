@@ -66,3 +66,66 @@
 .promo__button:hover {
   opacity: 0.8;
 }
+
+
+@media screen and (max-width: 1150px) {
+  .promo_info {
+    width: 550px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}
+
+
+@media screen and (max-width: 900px) {
+  .promo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo_info {
+    align-items: center;
+  }
+
+  .promo__title {
+    text-align: center;
+
+    font: 400 40px/50px Inter;
+    letter-spacing: -0.04em;
+  }
+
+  .promo__subtitle {
+    text-align: center;
+    font: 400 13px/16px Inter;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .promo_info {
+    width: 300px;
+  }
+
+  .promo__image {
+    width: 226px;
+    height: 221px;
+
+    background: transparent url(./images/www.svg) center / 226px 221px no-repeat;
+  }
+  
+  .promo__title {
+    font: 400 30px/38px Inter;
+  }
+
+  .promo__subtitle {
+    width: 260px;
+  }
+}

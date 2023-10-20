@@ -9,3 +9,23 @@
   font: 400 22px/27px Inter;
   letter-spacing: -0.04em;
 }
+
+
+@media screen and (max-width: 1000px) {
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .about-main__subtitle {
+    padding-bottom: 28px;
+  
+    font: 400 18px/22px Inter;
+  
+  }
+}

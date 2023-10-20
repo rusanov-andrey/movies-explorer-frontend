@@ -84,3 +84,101 @@
   width: 270px;
   height: 327px;
 }
+
+
+@media screen and (max-width: 1000px) {
+      
+}
+
+
+@media screen and (max-width: 800px) {
+  .aboutme {
+    padding: 90px 50px;
+  }
+
+
+  .aboutme__name {
+    font: 400 40px/40px Inter;
+  }
+  
+  .aboutme__short {
+    padding-top: 20px;
+  
+    font: 500 11px/1.2 Inter;
+  }
+  
+  .aboutme__long {
+    padding-top: 16px;
+  
+    font: 400 12px/18px Inter;
+  
+    max-width: 370px;
+  }
+  
+  .aboutme__link {
+    margin-top: 87px;
+  }
+  
+  .aboutme__photo {
+    margin: 0;
+  
+    object-fit: contain;
+    object-position: center;
+  
+    width: 255px;
+    height: 307px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .aboutme {
+    padding: 70px 10px;
+  }
+
+  .aboutme__container {
+    padding-top: 60px;
+  
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+  }
+  
+  .aboutme__info {
+    padding-top: 40px;
+  }
+
+  .aboutme__name {
+    font: 400 30px/36px Inter;
+  }
+  
+  .aboutme__short {
+    padding-top: 20px;
+  
+    font: 500 11px/1.2 Inter;
+  }
+  
+  .aboutme__long {
+    padding-top: 20px;
+  
+    font: 400 11px/16px Inter;
+  }
+  
+  .aboutme__link {
+    margin-top: 40px;
+  
+    font: 500 14px/1.2 Inter;
+  }
+  
+  .aboutme__photo {
+    margin: 0;
+  
+    object-fit: contain;
+    object-position: center;
+  
+    width: 292px;
+    height: 352px;
+
+    align-self: center;
+  }
+}

@@ -79,4 +79,11 @@
   .navigation-bar__text {
     text-decoration: underline;
   }
+
+  .navigation-bar__link_dark {
+    color: black;
+  }
+  .navigation-bar__text_dark {
+    color: black;
+  }
 }

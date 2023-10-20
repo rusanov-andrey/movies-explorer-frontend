@@ -7,8 +7,8 @@ import './PageAbout.css'
 export default function PageAbout() {
   return (
     <div className='page-about'>
-      <Header authorized={false} darkTheme={true} short={false}/>
       <Header authorized={true} darkTheme={true} short={false}/>
+      <Header authorized={false} darkTheme={true} short={false}/>
       <AboutMain />
       <Footer />
     </div>
