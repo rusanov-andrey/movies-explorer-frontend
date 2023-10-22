@@ -86,3 +86,44 @@
   opacity: 1;
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 800px) {
+  .card__info {
+    margin: 10px 0 25px;
+  }
+  
+  .card__title {
+    max-height: 24px;
+  
+    font: 500 13px/1.2 Inter;
+  }
+  
+  .card__heart {
+    width: 24px;
+    height: 24px;
+  
+    background-image: url(../../images/unliked.png);
+  }
+  
+  .card__heart_liked {
+    background-image: url(../../images/liked.png);
+  }
+  
+  .card__duration {
+    padding: 6px 0 0px;
+  
+    font: 500 13px/1.2 Inter;
+  }
+  
+  .card__del {
+    width: 24px;
+    height: 24px;
+  
+    background-image: url(../../images/del.png);
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+}

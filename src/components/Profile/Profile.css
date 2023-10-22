@@ -151,3 +151,29 @@
 
   text-align: end;
 }
+
+
+@media screen and (max-width: 800px) {
+  .profile {
+    padding: 236px 50px 70px;
+  }
+  .profile__info {
+    padding: 75px 0 0;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .profile {
+    padding: 70px 50px;
+  }
+  .profile__info {
+    padding: 60px 0 0;
+  }
+  .profile__edit-button {
+    margin: 359px 0 0;
+  }
+  .profile__save-button {
+    margin: 359px 0 0;
+  }
+}

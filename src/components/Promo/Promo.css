@@ -82,19 +82,22 @@
 
 @media screen and (max-width: 900px) {
   .promo {
+    padding: 140px 40px 75px;
+
     flex-direction: column;
     align-items: center;
   }
 
   .promo_info {
     align-items: center;
+    width: unset;
   }
 
   .promo__title {
+    margin-top: 48px;
     text-align: center;
 
     font: 400 40px/50px Inter;
-    letter-spacing: -0.04em;
   }
 
   .promo__subtitle {
@@ -105,27 +108,44 @@
 
 
 @media screen and (max-width: 800px) {
+  .promo__subtitle {
+    margin: 22px 0 0;
+    width: 260px;
+  }
+
+  .promo__button {
+    margin: 92px 0 0;
+  }
 }
 
 
 @media screen and (max-width: 500px) {
+  .promo {
+    padding: 70px 55px 30px;
+  }
 
+  .promo__image {
+    width: 210px;
+    height: 206px;
+
+    background: transparent url(./images/www.svg) center / 210px 206px no-repeat;
+  }
+  
   .promo_info {
     width: 300px;
   }
 
-  .promo__image {
-    width: 226px;
-    height: 221px;
-
-    background: transparent url(./images/www.svg) center / 226px 221px no-repeat;
-  }
-  
   .promo__title {
+    margin-top: 44px;
     font: 400 30px/38px Inter;
+    letter-spacing: -0.04em;
   }
 
   .promo__subtitle {
-    width: 260px;
+    margin: 24px 0 0;
+  }
+
+  .promo__button {
+    margin: 78px 0 0;
   }
 }

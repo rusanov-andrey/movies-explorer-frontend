@@ -82,6 +82,9 @@
     padding: 80px 10px 51px;
   }
 
+  .search-form__input-container {
+    margin-bottom: 41px;
+   }
   .search-form__filter-container {
     align-self: center;
   }

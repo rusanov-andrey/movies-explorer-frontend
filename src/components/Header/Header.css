@@ -180,7 +180,7 @@
 
 @media screen and (max-width: 800px) {
   .header {
-    padding: 18px 30px;
+    padding: 18px 30px 0;
   }
 
   .header_short {
@@ -269,20 +269,11 @@
     opacity: 0.7;
   }
 
-  .header__registration-link {
-    margin-right: 14px;
-    font: 500 10px/16px Inter;
-  }
-
-  .header__entrance-link {
-    font: 500 10px/16px Inter;
-    width: 56px;
-    min-height: 26px;
-  }
-
   .header__menu-button {
     display: block;
-  }
+    font: 900 60px/60px Inter;
+    position: relative;
+    top: -10px;}
 
   .header__account-button {
     display: none;
@@ -298,7 +289,7 @@
 
 @media screen and (max-width: 500px) {
   .header {
-    padding: 18px 10px;
+    padding: 18px 14px 0;
   }
   
   .header_short {
@@ -309,5 +300,16 @@
 
   .header__navigation-bar-close {
     margin: 22px 10px 0 0;
+  }
+
+  .header__registration-link {
+    margin-right: 14px;
+    font: 500 10px/16px Inter;
+  }
+
+  .header__entrance-link {
+    padding: 5px;
+    width: 56px;
+    min-height: 26px;
   }
 }

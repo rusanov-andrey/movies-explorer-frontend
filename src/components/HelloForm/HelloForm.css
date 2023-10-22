@@ -84,3 +84,21 @@
 .hello-form__link:hover {
   opacity: 0.7;
 }
+
+
+@media screen and (max-width: 800px) {
+}
+
+
+@media screen and (max-width: 500px) {
+  .hello-form {
+    min-height: 620px;
+  }
+  .hello-form__title {
+    align-self: center;
+    padding: 0 0 89px;
+
+    font: 500 24px/1.2 Inter;
+  
+  }
+}

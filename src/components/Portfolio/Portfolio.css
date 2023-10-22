@@ -1,6 +1,6 @@
 .portfolio {
   margin: 0;
-  padding: 0 70px 125px;
+  padding: 0 70px 106px;
   box-sizing: border-box;
 
   background-color: var(--color-light);
@@ -72,7 +72,7 @@
 
 @media screen and (max-width: 800px) {
   .portfolio {
-    padding: 0 50px 90px;
+    padding: 0 50px 70px;
   }
 
   .portfolio__site {
@@ -83,7 +83,7 @@
 
 @media screen and (max-width: 500px) {
   .portfolio {
-    padding: 0 10px 70px;
+    padding: 0 14px 50px;
   }
 
   .portfolio__title {
@@ -91,11 +91,11 @@
   }
   
   .portfolio__container {
-    padding: 40px 0 0;
+    padding: 24px 0 0;
   
     grid-template-columns: auto;
-    grid-template-rows: 67px;
-    grid-auto-rows: 67px;
+    grid-template-rows: 68px;
+    grid-auto-rows: 68px;
   
     align-content: center;
   }

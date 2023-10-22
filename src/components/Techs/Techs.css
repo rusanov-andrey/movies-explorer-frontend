@@ -82,39 +82,35 @@
   }
   
   .about-techs__big-text {
-    margin-top: 90px;
+    margin-top: 80px;
   
     font: 400 50px/58px Inter;
   }
   
   .about-techs__small-text {
-    margin-top: 26px;
+    margin-top: 22px;
   
-    font: 400 14px/20px Inter;
-  
-    max-width: 460px;
+    font: 400 12px/18px Inter;
+    letter-spacing: -0.04em;  
   }
   
   .about-techs__item-container {
-    margin-top: 100px;
+    margin-top: 83px;
   
-    grid-template-columns: repeat(7, 90px);
+    grid-template-columns: repeat(7, 84px);
     gap: 0 10px;
   }
   
   .about-techs__tech-item {
-    padding: 21px 14px;
-  
-    font: 400 14px Inter;
-  
-    border-radius: 10px;
+    padding: 20px 14px 20px;
+    letter-spacing: -0.04em;  
   }
 }
 
 
 @media screen and (max-width: 500px) {
   .about-techs {
-    padding: 70px 10px;
+    padding: 70px 18px;
     background-color: white;
 }
 

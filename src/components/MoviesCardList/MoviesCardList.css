@@ -62,11 +62,13 @@
 
 @media screen and (max-width: 800px) {
   .cardlist {
-    padding: 70px 30px 10px;
+    padding: 67px 30px 10px;
   }
 
   .cardlist__container {
+    --gap_x: 30px;
     grid-template-columns: repeat(2, calc((100% - 1*var(--gap_x))/2));
+    gap: 28px var(--gap_x);
   }
 }
 
