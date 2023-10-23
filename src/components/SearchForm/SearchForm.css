@@ -23,6 +23,7 @@
   padding: 0;
 
   border: none;
+  border-bottom: 1px solid white;
   outline: none;
 
   font: 500 28px Inter;
@@ -30,6 +31,17 @@
   flex: 1;
   max-width: 100%;
   width: 100%;
+}
+.search-form__input:invalid  {
+  border: 1px solid red;
+}
+.search-form__input:empty  {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.search-form__input:focus {
+  border: none;
+  border-bottom: 1px solid rgba(52, 86, 243, 1);
 }
 
 .search-form__button {
