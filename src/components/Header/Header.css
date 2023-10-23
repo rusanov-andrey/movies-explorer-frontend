@@ -271,9 +271,10 @@
 
   .header__menu-button {
     display: block;
-    font: 900 60px/60px Inter;
+    font: 500 60px/60px Inter;
     position: relative;
-    top: -10px;}
+    top: -10px;
+  }
 
   .header__account-button {
     display: none;
@@ -311,5 +312,11 @@
     padding: 5px;
     width: 56px;
     min-height: 26px;
+  }
+
+  .header__menu-button {
+    font: 500 50px/50px Inter;
+    position: relative;
+    top: -10px;
   }
 }
