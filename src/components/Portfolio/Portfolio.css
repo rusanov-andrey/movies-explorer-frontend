@@ -11,7 +11,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  font: 400 18px/1.2 Inter;
+  font: 400 18px/1.2 Inter, Arial, sans-serif;
 
   color: rgba(160, 160, 160, 1);
 }
@@ -61,7 +61,7 @@
   text-decoration: none;
   color: var(--color-dark);
 
-  font: 400 30px/50px Inter;
+  font: 400 30px/50px Inter, Arial, sans-serif;
   letter-spacing: -0.04em;
 }
 
@@ -85,7 +85,7 @@
   }
 
   .portfolio__site {
-    font: 400 28px/50px Inter;
+    font: 400 28px/50px Inter, Arial, sans-serif;
   }
 }
 
@@ -96,7 +96,7 @@
   }
 
   .portfolio__title {
-    font: 400 14px/1.2 Inter;
+    font: 400 14px/1.2 Inter, Arial, sans-serif;
   }
   
   .portfolio__container {
@@ -112,7 +112,7 @@
   .portfolio__site {
     padding: 20px 0;
 
-    font: 400 18px/28px Inter;
+    font: 400 18px/28px Inter, Arial, sans-serif;
   }
   
   .portfolio__site_arrow {

@@ -43,7 +43,7 @@
 
   cursor: pointer;
 
-  font: 500 12px/1.2 Inter;
+  font: 500 12px/1.2 Inter, Arial, sans-serif;
 }
 .cardlist__more:hover {
   opacity: 0.8;

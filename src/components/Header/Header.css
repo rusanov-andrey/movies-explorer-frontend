@@ -75,7 +75,7 @@
   padding: 6px 9px;
   box-sizing: border-box;
 
-  font: 500 13px/1 Inter;
+  font: 500 13px/1 Inter, Arial, sans-serif;
   color: black;
 }
 
@@ -99,7 +99,7 @@
   box-sizing: border-box;
 
   color: white;
-  font: 500 12px/16px Inter;
+  font: 500 12px/16px Inter, Arial, sans-serif;
   text-decoration: none;
 }
 .header__registration-link:hover {
@@ -115,7 +115,7 @@
   border-radius: 3px;
   background-color: var(--color-accent);
 
-  font: 500 12px/16px Inter;
+  font: 500 12px/16px IInter, Arial, sans-serifnter;
   min-height: 32px;
   width: 76px;
 
@@ -151,7 +151,7 @@
 
   display: none;
 
-  font: 900 40px/40px Inter;
+  font: 900 40px/40px Inter, Arial, sans-serif;
 
   cursor: pointer;
 }
@@ -271,7 +271,7 @@
 
   .header__menu-button {
     display: block;
-    font: 500 60px/60px Inter;
+    font: 500 60px/60px Inter, Arial, sans-serif;
     position: relative;
     top: -10px;
   }
@@ -305,7 +305,7 @@
 
   .header__registration-link {
     margin-right: 14px;
-    font: 500 10px/16px Inter;
+    font: 500 10px/16px Inter, Arial, sans-serif;
   }
 
   .header__entrance-link {
@@ -315,7 +315,7 @@
   }
 
   .header__menu-button {
-    font: 500 50px/50px Inter;
+    font: 500 50px/50px Inter, Arial, sans-serif;
     position: relative;
     top: -10px;
   }

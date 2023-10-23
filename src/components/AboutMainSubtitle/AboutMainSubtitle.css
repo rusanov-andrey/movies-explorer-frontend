@@ -6,7 +6,7 @@
 
   border-bottom: 1px solid var(--color-dark);
 
-  font: 400 22px/27px Inter;
+  font: 400 22px/27px Inter, Arial, sans-serif;
   letter-spacing: -0.04em;
 }
 
@@ -25,7 +25,7 @@
   .about-main__subtitle {
     padding-bottom: 28px;
   
-    font: 400 18px/22px Inter;
+    font: 400 18px/22px Inter, Arial, sans-serif;
   
   }
 }

@@ -38,7 +38,7 @@
   margin: 0;
   padding: 0;
 
-  font: 400 50px/58px Inter;
+  font: 400 50px/58px Inter, Arial, sans-serif;
   letter-spacing: -0.04em;
 }
 
@@ -47,7 +47,7 @@
   padding: 0;
   padding-top: 18px;
 
-  font: 500 18px/1.2 Inter;
+  font: 500 18px/1.2 IntInter, Arial, sans-serifer;
 }
 
 .aboutme__long {
@@ -55,7 +55,7 @@
   padding: 0;
   padding-top: 26px;
 
-  font: 400 14px/22px Inter;
+  font: 400 14px/22px Inter, Arial, sans-serif;
 
   max-width: 600px;
 }
@@ -67,7 +67,7 @@
   text-decoration: none;
   color: var(--color-dark);
 
-  font: 500 14px/1.2 Inter;
+  font: 500 14px/1.2 Inter, Arial, sans-serif;
 }
 .aboutme__link:hover {
   opacity: 0.7;
@@ -98,19 +98,19 @@
 
 
   .aboutme__name {
-    font: 400 40px/40px Inter;
+    font: 400 40px/40px Inter, Arial, sans-serif;
   }
   
   .aboutme__short {
     padding-top: 20px;
   
-    font: 500 11px/1.2 Inter;
+    font: 500 11px/1.2 Inter, Arial, sans-serif;
   }
   
   .aboutme__long {
     padding-top: 16px;
   
-    font: 400 12px/18px Inter;
+    font: 400 12px/18px Inter, Arial, sans-serif;
   
     max-width: 370px;
   }
@@ -149,25 +149,25 @@
   }
 
   .aboutme__name {
-    font: 400 30px/36px Inter;
+    font: 400 30px/36px Inter, Arial, sans-serif;
   }
   
   .aboutme__short {
     padding-top: 20px;
   
-    font: 500 11px/1.2 Inter;
+    font: 500 11px/1.2 Inter, Arial, sans-serif;
   }
   
   .aboutme__long {
     padding-top: 20px;
   
-    font: 400 11px/16px Inter;
+    font: 400 11px/16px Inter, Arial, sans-serif;
   }
   
   .aboutme__link {
     margin-top: 40px;
   
-    font: 500 14px/1.2 Inter;
+    font: 500 14px/1.2 Inter, Arial, sans-serif;
   }
   
   .aboutme__photo {

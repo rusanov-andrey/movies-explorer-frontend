@@ -26,7 +26,7 @@
   border-bottom: 1px solid white;
   outline: none;
 
-  font: 500 28px Inter;
+  font: 500 28px Inter, Arial, sans-serif;
 
   flex: 1;
   max-width: 100%;
@@ -56,7 +56,7 @@
 
   background-color: rgba(52, 86, 243, 1);
   color: white;
-  font: 400 11px/1.2 Inter;
+  font: 400 11px/1.2 Inter, Arial, sans-serif;
 
   cursor: pointer;
 }

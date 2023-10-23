@@ -16,7 +16,7 @@
 
   margin-bottom: 5px;
 
-  font: 400 10px/1.2 Inter;
+  font: 400 10px/1.2 Inter, Arial, sans-serif;
 }
 
 .input__input {
@@ -27,7 +27,7 @@
 
   margin-bottom: 5px;
 
-  font: 400 14px/1.2 Inter;
+  font: 400 14px/1.2 Inter, Arial, sans-serif;
 
   border: none;
   outline: none;
@@ -52,7 +52,7 @@
 
   min-height: 10px;
 
-  font: 400 10px/1.2 Inter;
+  font: 400 10px/1.2 Inter, Arial, sans-serif;
   color: red;
 
   opacity: 0;

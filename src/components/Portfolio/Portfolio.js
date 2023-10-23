@@ -13,14 +13,14 @@ export  default function Portfolio() {
         </li>
         <li className='portfolio__item'>
           <a className='portfolio__link' href='#'>
-          <p className='portfolio__site' href='#'>Адаптивный сайт</p>
-          <p className='portfolio__site portfolio__site_arrow' href='#'>↗</p>
+            <p className='portfolio__site'>Адаптивный сайт</p>
+            <p className='portfolio__site portfolio__site_arrow'>↗</p>
           </a>
         </li>
         <li className='portfolio__item'>
           <a className='portfolio__link' href='#'>
-          <p className='portfolio__site' href='#'>Одностраничное приложение</p>
-          <p className='portfolio__site portfolio__site_arrow' href='#'>↗</p>
+            <p className='portfolio__site'>Одностраничное приложение</p>
+            <p className='portfolio__site portfolio__site_arrow'>↗</p>
           </a>
         </li>
       </ul>

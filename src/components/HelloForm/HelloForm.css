@@ -26,7 +26,7 @@
   padding: 0 0 40px;
   box-sizing: border-box;
 
-  font: 500 24px/1.2 Inter;
+  font: 500 24px/1.2 Inter, Arial, sans-serif;
 
 }
 
@@ -57,7 +57,7 @@
   border: none;
   border-radius: 3px;
 
-  font: 500 14px/1.2 Inter;
+  font: 500 14px/1.2 Inter, Arial, sans-serif;
 
   cursor: pointer;
 }
@@ -76,7 +76,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  font: 400 14px/1.2 Inter;
+  font: 400 14px/1.2 Inter, Arial, sans-serif;
   color: rgba(160, 160, 160, 1);
 }
 
@@ -87,7 +87,7 @@
 
   text-decoration: none;
 
-  font: 400 14px/1.2 Inter;
+  font: 400 14px/1.2 Inter, Arial, sans-serif;
   color: rgba(52, 86, 243, 1);
 }
 .hello-form__link:hover {
@@ -107,7 +107,7 @@
     align-self: center;
     padding: 0 0 89px;
 
-    font: 500 24px/1.2 Inter;
+    font: 500 24px/1.2 Inter, Arial, sans-serif;
   
   }
 }

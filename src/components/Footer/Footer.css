@@ -17,7 +17,7 @@
 
   border-bottom: 1px solid rgba(232, 232, 232, 1);
 
-  font: 400 13px/1.2 Inter;
+  font: 400 13px/1.2 Inter, Arial, sans-serif;
   color: rgba(160, 160, 160, 1);
 }
 
@@ -31,7 +31,7 @@
   flex-direction: row;
   justify-content: space-between;
 
-  font: 400 13px/1.2 Inter;
+  font: 400 13px/1.2 Inter, Arial, sans-serif;
 }
 
 .footer__date {

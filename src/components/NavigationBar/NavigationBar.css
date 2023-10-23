@@ -33,7 +33,7 @@
   text-decoration: none;
   color: black;
 
-  font: 400 14px/18px Inter;
+  font: 400 14px/18px Inter, Arial, sans-serif;
 
 }
 .navigation-bar__link_dark {
@@ -51,7 +51,7 @@
   text-decoration: none;
   color: black;
 
-  font: 500 14px/18px Inter;
+  font: 500 14px/18px Inter, Arial, sans-serif;
 }
 .navigation-bar__text_dark {
   color: white;
@@ -82,13 +82,13 @@
   }
 
   .navigation-bar__link {
-    font: 500 18px/22px Inter;
+    font: 500 18px/22px Inter, Arial, sans-serif;
   }
   .navigation-bar__text {
     border-bottom: 2px solid black;
     padding: 6px 0;
 
-    font: 500 18px/22px Inter;
+    font: 500 18px/22px Inter, Arial, sans-serif;
   }
 
   .navigation-bar__link_dark {

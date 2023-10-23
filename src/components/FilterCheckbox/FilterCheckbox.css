@@ -6,7 +6,7 @@
   position: relative;
   box-sizing: border-box;
 
-  font: 400 14px/1.2 Inter;
+  font: 400 14px/1.2 Inter, Arial, sans-serif;
 }
 
 .filter-checkbox__container {
@@ -80,7 +80,7 @@
 
 @media screen and (max-width: 500px) {
   .filter-checkbox {
-    font: 400 11px/1.2 Inter;
+    font: 400 11px/1.2 Inter, Arial, sans-serif;
     letter-spacing: unset;
   }
 }

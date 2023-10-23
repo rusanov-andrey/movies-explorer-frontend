@@ -36,7 +36,7 @@
   white-space: nowrap;
   overflow: hidden;
 
-  font: 500 13px/1.2 Inter;
+  font: 500 13px/1.2 Inter, Arial, sans-serif;
 }
 
 .card__heart {
@@ -68,7 +68,7 @@
 
   border-top: 1px solid rgba(232, 232, 232, 1);
 
-  font: 400 11px/1.2 Inter;
+  font: 400 11px/1.2 Inter, Arial, sans-serif;
 }
 
 .card__del {
@@ -102,7 +102,7 @@
   .card__title {
     max-height: 24px;
   
-    font: 500 13px/1.2 Inter;
+    font: 500 13px/1.2 Inter, Arial, sans-serif;
   }
   
   .card__heart {
@@ -131,6 +131,6 @@
 
 @media screen and (max-width: 500px) {
   .card__duration {
-    font: 400 10px/1.2 Inter;
+    font: 400 10px/1.2 Inter, Arial, sans-serif;
   }
 }

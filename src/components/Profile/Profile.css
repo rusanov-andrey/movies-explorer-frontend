@@ -30,7 +30,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  font: 500 24px/1.2 Inter;
+  font: 500 24px/1.2 Inter, Arial, sans-serif;
 }
 
 .profile__info {
@@ -70,7 +70,7 @@
   padding-right: 20px;
   box-sizing: border-box;
 
-  font: 500 11px/1.2 Inter;
+  font: 500 11px/1.2 Inter, Arial, sans-serif;
 }
 
 .profile__info-data {
@@ -78,7 +78,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  font: 400 11px/1.2 Inter;
+  font: 400 11px/1.2 Inter, Arial, sans-serif;
 }
 
 .profile__edit-button {
@@ -90,7 +90,7 @@
   border: none;
   outline: none;
 
-  font: 400 13px/1.2 Inter;
+  font: 400 13px/1.2 Inter, Arial, sans-serif;
 
   cursor: pointer;
 }
@@ -108,7 +108,7 @@
   outline: none;
 
   color: rgba(255, 0, 77, 1);
-  font: 400 13px/1.2 Inter;
+  font: 400 13px/1.2 Inter, Arial, sans-serif;
 
   cursor: pointer;
 }
@@ -130,7 +130,7 @@
   outline: none;
 
   color: white;
-  font: 400 14px/1.2 Inter;
+  font: 400 14px/1.2 Inter, Arial, sans-serif;
 
   cursor: pointer;
 }
@@ -148,7 +148,7 @@
   border: none;
   outline: none;
 
-  font: 400 11px/1.2 Inter;
+  font: 400 11px/1.2 Inter, Arial, sans-serif;
 
   text-align: end;
 }

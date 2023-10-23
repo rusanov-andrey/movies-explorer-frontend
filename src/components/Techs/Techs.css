@@ -24,7 +24,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  font: 400 50px/58px Inter;
+  font: 400 50px/58px Inter, Arial, sans-serif;
   letter-spacing: -0.04em;
 }
 
@@ -34,7 +34,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  font: 400 14px/20px Inter;
+  font: 400 14px/20px Inter, Arial, sans-serif;
 
   max-width: 460px;
   text-align: center;
@@ -60,7 +60,7 @@
 
   background-color: rgba(232, 232, 232, 1);
 
-  font: 400 14px Inter;
+  font: 400 14px Inter, Arial, sans-serif;
   text-align: center;
 
   border-radius: 10px;
@@ -84,13 +84,13 @@
   .about-techs__big-text {
     margin-top: 80px;
   
-    font: 400 50px/58px Inter;
+    font: 400 50px/58px Inter, Arial, sans-serif;
   }
   
   .about-techs__small-text {
     margin-top: 22px;
   
-    font: 400 12px/18px Inter;
+    font: 400 12px/18px Inter, Arial, sans-serif;
     letter-spacing: -0.04em;  
   }
   
@@ -126,13 +126,13 @@
   .about-techs__big-text {
     margin-top: 60px;
   
-    font: 400 30px/37px Inter;
+    font: 400 30px/37px Inter, Arial, sans-serif;
   }
   
   .about-techs__small-text {
     margin-top: 24px;
   
-    font: 400 11px/16px Inter;
+    font: 400 11px/16px Inter, Arial, sans-serif;
   
     max-width: 292px;
   }
@@ -147,7 +147,7 @@
   .about-techs__tech-item {
     padding: 21px 0;
   
-    font: 400 12px Inter;
+    font: 400 12px Inter, Arial, sans-serif;
   
     border-radius: 10px;
   }
