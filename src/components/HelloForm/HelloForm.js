@@ -20,7 +20,7 @@ export  default function HelloForm({name, title, buttonText, info, linkText, lin
   }
 
   return (
-    <form className='hello-form' name={name} nethod='POST' noValidate onSubmit={handleFormSubmit} onChange={handleFormChange}>
+    <form className='hello-form' name={name} method='POST' noValidate onSubmit={handleFormSubmit} onChange={handleFormChange}>
       <div className='hello-form__field-container'>
         <h1 className='hello-form__title'>{title}</h1>
         {children}
