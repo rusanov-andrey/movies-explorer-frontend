@@ -4,11 +4,10 @@ import Footer from '../Footer/Footer';
 
 import './PageAbout.css'
 
-export default function PageAbout() {
+export default function PageAbout({authorized}) {
   return (
     <div className='page-about'>
-      <Header authorized={true} darkTheme={true} short={false}/>
-      <Header authorized={false} darkTheme={true} short={false}/>
+      <Header authorized={authorized} darkTheme={true} short={false}/>
       <AboutMain />
       <Footer />
     </div>
