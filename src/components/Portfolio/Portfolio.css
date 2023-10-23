@@ -27,9 +27,16 @@
   grid-auto-rows: 89px;
 
   align-content: center;
+
+  list-style: none;
 }
 
 .portfolio__item {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.portfolio__link {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -37,6 +44,8 @@
   display: flex;
   position: relative;
   justify-content: space-between;
+
+  text-decoration: none;
 
   border-bottom: 1px solid var(--color-dark);
 }
