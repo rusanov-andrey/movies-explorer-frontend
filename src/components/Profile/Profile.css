@@ -126,6 +126,7 @@
 
   background: rgba(52, 86, 243, 1);
   border: none;
+  border-radius: 3px;
   outline: none;
 
   color: white;

@@ -18,7 +18,7 @@ export  default function MoviesCardList({saved}) {
         <MoviesCard img={pic004} caption='Баския: Взрыв реальности' duration='1000' saved={saved} liked={false}/>
         <MoviesCard img={pic005} caption='Бег это свобода' duration='100' saved={saved} liked={false}/>
       </ul>
-      { !saved && <input className='cardlist__more' type='button' value='Ещё'/> }
+      { !saved && <button className='cardlist__more'>Ещё</button> }
     </main>
   );
 }
