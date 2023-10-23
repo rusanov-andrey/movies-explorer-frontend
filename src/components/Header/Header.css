@@ -225,7 +225,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    width: 500px;
+    width: 520px;
     height: 100vh;
 
     display: flex;
@@ -300,7 +300,7 @@
   }
 
   .header__navigation-bar-close {
-    margin: 22px 10px 0 0;
+    margin: 13px 13px 0 0;
   }
 
   .header__registration-link {
@@ -318,5 +318,9 @@
     font: 500 50px/50px Inter;
     position: relative;
     top: -10px;
+  }
+
+  .header__account-button_navigation {
+    margin-bottom: 46px;
   }
 }
