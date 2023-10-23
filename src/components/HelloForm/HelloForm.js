@@ -11,6 +11,7 @@ export  default function HelloForm({name, title, buttonText, info, linkText, lin
   function handleFormChange(evt) {
     const validStatus = handleChange(evt);
     subminButtonRef.current.disabled = !validStatus;
+    console.log(`Valid: ${validStatus}`)
   }
 
   function handleFormSubmit(evt) {

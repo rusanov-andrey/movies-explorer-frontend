@@ -54,12 +54,20 @@
   color: white;
   background-color: rgba(52, 86, 243, 1);
 
+  border: none;
+
   font: 500 14px/1.2 Inter;
 
   cursor: pointer;
 }
 .hello-form__submit:hover {
   opacity: 0.8;
+}
+.hello-form__submit:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+  color: rgba(194, 194, 194, 1);
+  background-color: rgba(248, 248, 248, 1);
 }
 
 .hello-form__info {

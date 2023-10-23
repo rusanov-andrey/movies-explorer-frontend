@@ -9,7 +9,7 @@ export  default function SearchForm() {
   return (
     <form className='search-form' name='movie' method='POST'>
       <div className='search-form__input-container'>
-        <input className='search-form__input' type='text' placeholder='Фильм'/>
+        <input className='search-form__input' type='text' placeholder='Фильм' required/>
         <button className='search-form__button'>Найти</button>
       </div>
       <div className='search-form__filter-container'>

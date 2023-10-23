@@ -18,7 +18,7 @@ export  default function Profile() {
             <label className='profile__info-title'>E-mail</label>
             <input className='profile__info-editor' type='text' defaultValue='aaa@bbb.ru'/>
           </div>
-          <input className='profile__save-button' type='button' value='Сохранить' onClick={() => setEditMode(false)}/>
+          <button className='profile__save-button' onClick={() => setEditMode(false)}>Сохранить</button>
         </form>
       </div>
     );
