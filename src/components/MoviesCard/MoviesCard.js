@@ -15,8 +15,8 @@ export  default function MoviesCard({img, caption, duration, saved, liked}) {
       <img className='card__image' src={img} alt={caption}/>
       <div className='card__info'>
         <p className='card__title'>{caption}</p>
-        {!saved && <div className={'card__heart ' + (liked ? 'card__heart_liked' : '')}/>}
-        {saved && <div className='card__del'/>}
+        {!saved && <button className={'card__heart ' + (liked ? 'card__heart_liked' : '')}/>}
+        {saved && <button className='card__del'/>}
       </div>
       <p className='card__duration'>{printDuration(duration)}</p>
     </li>

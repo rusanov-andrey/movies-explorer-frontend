@@ -48,7 +48,10 @@
 
   cursor: pointer;
 
-  background-image: url(../../images/unliked.png);
+  border: none;
+  background-color: transparent;
+
+background-image: url(../../images/unliked.png);
 }
 
 .card__heart_liked {
@@ -77,6 +80,9 @@
 
   background-image: url(../../images/del.png);
 
+  border: none;
+  background-color: transparent;
+
   opacity: 0;
 
   transition: opacity 0.2s linear;
@@ -102,7 +108,7 @@
   .card__heart {
     width: 24px;
     height: 24px;
-  
+
     background-image: url(../../images/unliked.png);
   }
   
