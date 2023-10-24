@@ -15,7 +15,7 @@ export  default function AboutMe() {
             <div className='aboutme__long'>Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена 
 и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.</div>
           </div>
-          <a className='aboutme__link' href='https://github.com/ivanov'>Github</a>
+          <a className='aboutme__link' href='https://github.com/rusanov-andrey/'>Github</a>
         </div>
         <img className='aboutme__photo' src={author_photo} alt='Фотография автора'/>
       </div>

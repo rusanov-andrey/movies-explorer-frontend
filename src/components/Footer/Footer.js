@@ -9,7 +9,7 @@ export default function Footer() {
         <span className='footer__date'>© 2023</span>
         <div className='footer__link-container'>
           <Link className='footer__link' to='https://practicum.yandex.ru/'>Яндекс.Практикум</Link>
-          <Link className='footer__link' to='https://github.com/ivanovy'>Github</Link>
+          <Link className='footer__link' to='https://github.com/rusanov-andrey/'>Github</Link>
         </div>
       </div>
     </footer>
