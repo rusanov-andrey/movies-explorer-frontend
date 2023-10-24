@@ -32,7 +32,7 @@
 
   width: 38px;
   height: 38px;
-  background-image: url(../../images/logo.png);
+  background-image: url(../../images/logo.svg);
 }
 
 .header__link-container {
@@ -89,7 +89,7 @@
   border-width: 0;
   border-radius: 13px;
 
-  background: rgba(249, 249, 249, 1) url(../../images/account_icon.png) center / 11px 11px no-repeat; 
+  background: rgba(249, 249, 249, 1) url(../../images/account_icon.svg) center / 11px 11px no-repeat; 
 }
 
 .header__registration-link {
