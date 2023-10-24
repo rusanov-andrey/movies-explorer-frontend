@@ -91,12 +91,16 @@
 
 @media screen and (max-width: 500px) {
   .search-form {
-    padding: 80px 10px 51px;
+    padding: 97px 10px 51px;
   }
 
   .search-form__input-container {
     margin-bottom: 41px;
    }
+   .search-form__input {
+    font: 500 18px Inter, Arial, sans-serif;
+  }
+  
   .search-form__filter-container {
     align-self: center;
   }

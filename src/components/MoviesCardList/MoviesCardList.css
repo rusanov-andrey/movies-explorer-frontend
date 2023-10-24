@@ -63,23 +63,24 @@
 
 @media screen and (max-width: 800px) {
   .cardlist {
-    padding: 67px 30px 10px;
+    padding: 69px 30px 10px;
   }
 
   .cardlist__container {
     --gap_x: 30px;
     grid-template-columns: repeat(2, calc((100% - 1*var(--gap_x))/2));
-    gap: 28px var(--gap_x);
+    gap: 30px var(--gap_x);
   }
 }
 
 
 @media screen and (max-width: 500px) {
   .cardlist {
-    padding: 40px 10px 10px;
+    padding: 36px 10px 10px;
   }
   .cardlist__container {
     grid-template-columns: calc(100%);
+    row-gap: 34px;
   }
   .cardlist__more {
     width: 240px;

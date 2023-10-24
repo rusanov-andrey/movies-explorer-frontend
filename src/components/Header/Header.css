@@ -151,15 +151,18 @@
 
   display: none;
 
-  font: 900 40px/40px Inter, Arial, sans-serif;
+  width: 44px;
+  height: 44px;
 
   cursor: pointer;
+
+  background: transparent url(../../images/burger.svg) center / 44px 44px  no-repeat;
 }
 .header__menu-button:hover {
   opacity: 0.7;
 }
 .header__menu-button_dark {
-  color: white;
+  background-image: url(../../images/burger_white.svg);
 }
 
 .header__navigation-bar-popup {
@@ -180,7 +183,7 @@
 
 @media screen and (max-width: 800px) {
   .header {
-    padding: 18px 30px 0;
+    padding: 18px 30px 11px;
   }
 
   .header_short {
@@ -271,9 +274,8 @@
 
   .header__menu-button {
     display: block;
-    font: 500 60px/60px Inter, Arial, sans-serif;
     position: relative;
-    top: -10px;
+    top: -3px;
   }
 
   .header__account-button {
@@ -314,13 +316,17 @@
     min-height: 26px;
   }
 
-  .header__menu-button {
-    font: 500 50px/50px Inter, Arial, sans-serif;
-    position: relative;
-    top: -10px;
-  }
-
   .header__account-button_navigation {
     margin-bottom: 46px;
+  }
+
+  .header__menu-button {
+    width: 40px;
+    height: 43px;
+  
+    background: transparent url(../../images/burger_narrow.svg) center / 40px 43px  no-repeat;
+  }
+  .header__menu-button_dark {
+    background-image: url(../../images/burger_narrow_white.svg);
   }
 }

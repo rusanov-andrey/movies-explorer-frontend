@@ -44,7 +44,7 @@ export default function Header({authorized, darkTheme, short}) {
       </div>
       { !short && authorized && renderAccauntInfo()}
       { !short && !authorized && renderEntranceLinks()}
-      { authorized && <div className={'header__menu-button ' + (darkTheme ? 'header__menu-button_dark' : '')} onClick={handleMenuClick}>≡</div> }
+      { authorized && <div className={'header__menu-button ' + (darkTheme ? 'header__menu-button_dark' : '')} onClick={handleMenuClick}></div> }
       <div ref={menuRef} className='header__navigation-bar-popup'>
         <div className='header__navigation-bar-overlay'>
           <div className='header__navigation-bar-group'>
