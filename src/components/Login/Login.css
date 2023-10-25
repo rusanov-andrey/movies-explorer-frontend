@@ -1,0 +1,28 @@
+.login {
+  margin: 40px auto 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  width: 460px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .login {
+    width: 430px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .login {
+    width: 396px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .login {
+    width: 260px;
+  }
+}

@@ -1,0 +1,147 @@
+.about-project {
+  margin: 0;
+  padding: 110px 70px;
+
+  background-color: var(--color-light);
+}
+
+.about-project__description-container {
+  margin: 0;
+  padding: 70px 0;
+
+  display: grid;
+  position: relative;
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 40px;
+}
+
+.about-project__article {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.about-project__item-title {
+  margin: 0;
+  padding: 0;
+
+  font: 400 20px/24px Inter, Arial, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.about-project__item-text {
+  margin: 26px 0 0;
+  padding: 0;
+
+  font: 400 14px/20px Inter, Arial, sans-serif;
+}
+
+.about-project__progress-container {
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+
+  display: grid;
+  position: relative;
+
+  grid-template-columns: 1fr 4fr;
+  gap: 14px 0px;
+}
+
+.about-project__bar {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--color-medium);
+
+  text-align: center;
+  font: 400 14px Inter, Arial, sans-serif;
+  line-height: 36px;
+
+  min-height: 36px;
+}
+
+.about-project__bar_color_green {
+  background-color: var(--color-accent);
+}
+
+.about-project__bar-description {
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+  font: 400 14px/1.2 Inter, Arial, sans-serif;
+  color: rgba(160, 160, 160, 1)
+}
+
+
+@media screen and (max-width: 1000px) {
+  
+}
+
+
+@media screen and (max-width: 800px) {
+  .about-project {
+    padding: 90px 50px;
+  }
+
+  .about-project__description-container {
+    padding: 70px 0;
+  }
+
+  .about-project__item-title {
+  }
+  .about-project__item-text {
+    margin: 26px 0 0;
+    font: 400 12px/18px Inter, Arial, sans-serif;
+  }  
+
+  .about-project__progress-container {
+    padding-top: 23px;
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .about-project {
+    padding: 70px 18px 67px;
+  }
+
+  .about-project__description-container {
+    padding: 60px 0;
+
+    grid-template-columns: auto;
+    gap: unset;
+    row-gap: 56px;     
+  }
+
+  .about-project__item-title {
+    font: 400 18px/22px Inter, Arial, sans-serif;
+  }
+  .about-project__item-text {
+    margin: 16px 0 0;
+    font: 400 11px/16px Inter, Arial, sans-serif;
+  }  
+
+  .about-project__progress-container {
+    padding-top: 0;
+
+    grid-template-columns: 1fr 2fr;
+}
+
+  .about-project__bar {
+    font: 400 11px Inter, Arial, sans-serif;
+    line-height: 35px;
+  
+    min-height: 35px;
+  }
+  
+  .about-project__bar-description {
+    font: 400 11px/1.2 Inter, Arial, sans-serif;
+  }
+}

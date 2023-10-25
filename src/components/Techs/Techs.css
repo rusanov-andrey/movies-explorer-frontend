@@ -1,0 +1,154 @@
+.about-techs {
+  margin: 0;
+  padding: 100px 70px;
+  box-sizing: border-box;
+
+  background-color: var(--color-medium);
+}
+
+.about-techs__container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.about-techs__big-text {
+  margin: 0;
+  margin-top: 90px;
+  padding: 0;
+  box-sizing: border-box;
+
+  font: 400 50px/58px Inter, Arial, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.about-techs__small-text {
+  margin: 0;
+  margin-top: 26px;
+  padding: 0;
+  box-sizing: border-box;
+
+  font: 400 14px/20px Inter, Arial, sans-serif;
+
+  max-width: 460px;
+  text-align: center;
+}
+
+.about-techs__item-container {
+  margin: 0;
+  margin-top: 100px;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: grid;
+  position: relative;
+
+  grid-template-columns: repeat(7, 90px);
+  gap: 0 10px;
+}
+
+.about-techs__tech-item {
+  margin: 0;
+  padding: 21px 14px;
+  box-sizing: border-box;
+
+  background-color: rgba(232, 232, 232, 1);
+
+  font: 400 14px Inter, Arial, sans-serif;
+  text-align: center;
+
+  border-radius: 10px;
+  border-width: 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+    
+}
+
+
+@media screen and (max-width: 800px) {
+  .about-techs {
+    padding: 90px 50px;
+  }
+
+  .about-techs__container {
+  }
+  
+  .about-techs__big-text {
+    margin-top: 80px;
+  
+    font: 400 50px/58px Inter, Arial, sans-serif;
+  }
+  
+  .about-techs__small-text {
+    margin-top: 22px;
+  
+    font: 400 12px/18px Inter, Arial, sans-serif;
+    letter-spacing: -0.04em;  
+  }
+  
+  .about-techs__item-container {
+    margin-top: 83px;
+  
+    grid-template-columns: repeat(7, 84px);
+    gap: 0 10px;
+  }
+  
+  .about-techs__tech-item {
+    padding: 20px 14px 20px;
+    letter-spacing: -0.04em;  
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .about-techs__item-container {
+    grid-template-columns: repeat(4, 84px);
+    gap: 10px 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about-techs {
+    padding: 70px 18px;
+    background-color: white;
+}
+
+  .about-techs__container {
+  }
+  
+  .about-techs__big-text {
+    margin-top: 60px;
+  
+    font: 400 30px/37px Inter, Arial, sans-serif;
+  }
+  
+  .about-techs__small-text {
+    margin-top: 24px;
+  
+    font: 400 11px/16px Inter, Arial, sans-serif;
+  
+    max-width: 292px;
+  }
+  
+  .about-techs__item-container {
+    margin-top: 50px;
+  
+    grid-template-columns: repeat(2, 84px);
+    gap: 10px 10px;
+  }
+  
+  .about-techs__tech-item {
+    padding: 21px 0;
+  
+    font: 400 12px Inter, Arial, sans-serif;
+  
+    border-radius: 10px;
+  }
+}

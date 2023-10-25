@@ -1,0 +1,136 @@
+.card {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.card__image {
+  margin: 0;
+  padding: 0;
+  
+  object-fit: cover;
+
+  width: 100%;
+}
+
+.card__info {
+  margin: 10px 0 25px;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__title {
+  margin: 0;
+  padding: 0;
+
+  max-height: 24px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  font: 500 13px/1.2 Inter, Arial, sans-serif;
+}
+
+.card__heart {
+  margin: 0;
+  padding: 0;
+
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+
+  border: none;
+  background-color: transparent;
+
+  background-image: url(../../images/unliked.svg);
+}
+
+.card__heart_liked {
+  background-image: url(../../images/liked.svg);
+}
+
+.card__duration {
+  margin: 0;
+  padding: 6px 0 0px;
+
+  display: block;
+
+  color: rgba(160, 160, 160, 1);
+
+  border-top: 1px solid rgba(232, 232, 232, 1);
+
+  font: 400 11px/1.2 Inter, Arial, sans-serif;
+}
+
+.card__del {
+  margin: 0;
+  padding: 0;
+
+  width: 24px;
+  height: 24px;
+
+  background-image: url(../../images/del.svg);
+
+  border: none;
+  background-color: transparent;
+
+  opacity: 0;
+
+  transition: opacity 0.2s linear;
+}
+
+.card:hover  .card__del {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+  .card__info {
+    margin: 10px 0 25px;
+  }
+  
+  .card__title {
+    max-height: 24px;
+  
+    font: 500 13px/1.2 Inter, Arial, sans-serif;
+  }
+  
+  .card__heart {
+    width: 24px;
+    height: 24px;
+
+    background-image: url(../../images/unliked.svg);
+  }
+  
+  .card__heart_liked {
+    background-image: url(../../images/liked.svg);
+  }
+  
+  .card__duration {
+    padding: 6px 0 0px;
+  }
+  
+  .card__del {
+    width: 24px;
+    height: 24px;
+  
+    background-image: url(../../images/del.svg);
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .card__duration {
+    font: 400 10px/1.2 Inter, Arial, sans-serif;
+  }
+}

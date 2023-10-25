@@ -1,0 +1,184 @@
+.aboutme {
+  margin: 0;
+  padding: 110px 70px 100px;
+
+  background-color: var(--color-light);
+}
+
+.aboutme__container {
+  margin: 0;
+  padding: 0;
+  padding-top: 66px;
+
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.aboutme__info {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.aboutme__info-container {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.aboutme__name {
+  margin: 0;
+  padding: 0;
+
+  font: 400 50px/58px Inter, Arial, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.aboutme__short {
+  margin: 0;
+  padding: 0;
+  padding-top: 18px;
+
+  font: 500 18px/1.2 IntInter, Arial, sans-serifer;
+}
+
+.aboutme__long {
+  margin: 0;
+  padding: 0;
+  padding-top: 26px;
+
+  font: 400 14px/22px Inter, Arial, sans-serif;
+
+  max-width: 600px;
+}
+
+.aboutme__link {
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  color: var(--color-dark);
+
+  font: 500 14px/1.2 Inter, Arial, sans-serif;
+}
+.aboutme__link:hover {
+  opacity: 0.7;
+}
+
+.aboutme__photo {
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+
+  object-fit: contain;
+  object-position: center;
+
+  width: 270px;
+  height: 327px;
+}
+
+
+@media screen and (max-width: 1000px) {
+      
+}
+
+
+@media screen and (max-width: 800px) {
+  .aboutme {
+    padding: 90px 50px;
+  }
+
+
+  .aboutme__name {
+    font: 400 40px/40px Inter, Arial, sans-serif;
+  }
+  
+  .aboutme__short {
+    padding-top: 20px;
+  
+    font: 500 11px/1.2 Inter, Arial, sans-serif;
+  }
+  
+  .aboutme__long {
+    padding-top: 16px;
+  
+    font: 400 12px/18px Inter, Arial, sans-serif;
+  
+    max-width: 370px;
+  }
+  
+  .aboutme__link {
+    margin-top: 87px;
+  }
+  
+  .aboutme__photo {
+    margin: 0;
+  
+    object-fit: contain;
+    object-position: center;
+  
+    width: 255px;
+    height: 307px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .aboutme {
+    padding: 70px 14px;
+  }
+
+  .aboutme__container {
+    padding-top: 60px;
+  
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+  }
+  
+  .aboutme__info {
+    padding-top: 40px;
+  }
+
+  .aboutme__name {
+    font: 400 30px/36px Inter, Arial, sans-serif;
+  }
+  
+  .aboutme__short {
+    padding-top: 20px;
+  
+    font: 500 11px/1.2 Inter, Arial, sans-serif;
+  }
+  
+  .aboutme__long {
+    padding-top: 20px;
+  
+    font: 400 11px/16px Inter, Arial, sans-serif;
+  }
+  
+  .aboutme__link {
+    margin-top: 40px;
+  
+    font: 500 14px/1.2 Inter, Arial, sans-serif;
+  }
+  
+  .aboutme__photo {
+    margin: 0;
+  
+    object-fit: contain;
+    object-position: center;
+  
+    width: 292px;
+    height: 352px;
+
+    align-self: center;
+  }
+}

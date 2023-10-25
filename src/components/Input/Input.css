@@ -1,0 +1,64 @@
+.input {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.input__title {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  margin-bottom: 5px;
+
+  font: 400 10px/1.2 Inter, Arial, sans-serif;
+}
+
+.input__input {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+
+  margin-bottom: 5px;
+
+  font: 400 14px/1.2 Inter, Arial, sans-serif;
+
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
+}
+.input__input:invalid  {
+  border: 1px solid red;
+}
+.input__input:empty  {
+  border: none;
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
+}
+.input__input:focus {
+  border: none;
+  border-bottom: 1px solid rgba(52, 86, 243, 1);
+}
+
+.input__error {
+  margin: 0;
+  padding: 5px 0 0;
+  box-sizing: border-box;
+
+  min-height: 10px;
+
+  font: 400 10px/1.2 Inter, Arial, sans-serif;
+  color: red;
+
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.input__error_visible {
+  opacity: 1;
+}

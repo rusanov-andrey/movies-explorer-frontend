@@ -1,0 +1,151 @@
+.promo {
+  margin: 0;
+  padding: 75px 70px;
+
+  color: #fff;
+  background-color: rgba(7, 48, 66, 1);
+
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.promo__image {
+  margin: 0;
+  padding: 0;
+
+  width: 310px;
+  height: 304px;
+  background-image: url(./images/www.svg);
+}
+
+.promo_info {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  width: 640px;
+}
+
+.promo__title {
+  margin: 0;
+  padding: 0;
+
+  color: var(--color-light);
+  font: 400 50px/58px Inter, Arial, sans-serif;
+}
+
+.promo__subtitle {
+  margin: 36px 0 0;
+  padding: 0;
+
+  width: 310px;
+
+  color: var(--color-light);
+  font: 400 13px/1.2 Inter, Arial, sans-serif;
+}
+
+
+.promo__button {
+  margin: 146px 0 0;
+  padding: 10px 20px;
+
+  color: var(--color-light);
+  background-color: transparent;
+
+  border: 1px solid white;
+  border-radius: 3px;
+  width: fit-content;
+  font: 500 12px/1.3 Inter, Arial, sans-serif;
+  text-decoration: none;
+}
+.promo__button:hover {
+  opacity: 0.8;
+}
+
+
+@media screen and (max-width: 1150px) {
+  .promo_info {
+    width: 550px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}
+
+
+@media screen and (max-width: 900px) {
+  .promo {
+    padding: 140px 40px 75px;
+
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo_info {
+    align-items: center;
+    width: unset;
+  }
+
+  .promo__title {
+    margin-top: 48px;
+    text-align: center;
+
+    font: 400 40px/50px Inter, Arial, sans-serif;
+  }
+
+  .promo__subtitle {
+    text-align: center;
+    font: 400 13px/16px Inter, Arial, sans-serif;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .promo__subtitle {
+    margin: 22px 0 0;
+    width: 260px;
+  }
+
+  .promo__button {
+    margin: 92px 0 0;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .promo {
+    padding: 70px 55px 30px;
+  }
+
+  .promo__image {
+    width: 210px;
+    height: 206px;
+
+    background: transparent url(./images/www.svg) center / 210px 206px no-repeat;
+  }
+  
+  .promo_info {
+    width: 300px;
+  }
+
+  .promo__title {
+    margin-top: 44px;
+    font: 400 30px/38px Inter, Arial, sans-serif;
+    letter-spacing: -0.04em;
+  }
+
+  .promo__subtitle {
+    margin: 24px 0 0;
+  }
+
+  .promo__button {
+    margin: 78px 0 0;
+  }
+}

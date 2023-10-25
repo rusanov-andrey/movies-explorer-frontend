@@ -1,0 +1,122 @@
+.navigation-bar {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.navigation-bar__menu {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: grid;
+  position: relative;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  column-gap: 16px;
+  justify-items: center;
+  align-items:  center;
+}
+
+.navigation-bar__link {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  color: black;
+
+  font: 400 14px/18px Inter, Arial, sans-serif;
+
+}
+.navigation-bar__link_dark {
+  color: white;
+}
+.navigation-bar__link:hover {
+  opacity: 0.7;
+}
+
+.navigation-bar__text {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  color: black;
+
+  font: 500 14px/18px Inter, Arial, sans-serif;
+}
+.navigation-bar__text_dark {
+  color: white;
+}
+.navigation-bar__text:hover {
+  opacity: 0.7;
+}
+
+
+@media screen and (max-width: 800px) {
+  .navigation-bar {
+    padding-top: 105px;
+  }
+
+  .navigation-bar__menu {
+    display: grid;
+    position: relative;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    grid-auto-columns: unset;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    column-gap: unset;
+    row-gap: 21px;
+    justify-items: center;
+    align-items:  center;
+  
+  }
+
+  .navigation-bar__link {
+    font: 500 18px/22px Inter, Arial, sans-serif;
+  }
+  .navigation-bar__text {
+    border-bottom: 2px solid black;
+    padding: 6px 0;
+
+    font: 500 18px/22px Inter, Arial, sans-serif;
+  }
+
+  .navigation-bar__link_dark {
+    color: black;
+  }
+  .navigation-bar__text_dark {
+    color: black;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .navigation-bar {
+    padding-top: 99px;
+  }
+
+  .navigation-bar__menu {
+    row-gap: 16px;
+  }
+
+  .navigation-bar__text {
+    padding: 7px 0;
+  }
+
+  .navigation-bar__link_dark {
+    color: black;
+  }
+  .navigation-bar__text_dark {
+    color: black;
+  }
+}
