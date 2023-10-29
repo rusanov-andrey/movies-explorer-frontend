@@ -41,8 +41,19 @@
   align-items: center;
 }
 
-.hello-form__submit {
+.hello-form__error {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font: 400 11px/1.2 Inter, Arial, sans-serif;
+
+  min-height: 14px;
+  color: red;
+}
+
+.hello-form__submit {
+  margin: 20px 0 0;
   padding: 0;
   box-sizing: border-box;
 
