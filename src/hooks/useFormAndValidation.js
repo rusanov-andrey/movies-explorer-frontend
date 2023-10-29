@@ -1,6 +1,6 @@
 import React from "react";
 
-export function useFormAndValidation(errorClassName, defaulValues, customValidate) {
+export function useFormAndValidation(errorClassName, defaulValues, customValidate, useParentSibling) {
   const [ values, setValues ] = React.useState(defaulValues || {});
   const [ errors, setErrors ] = React.useState({});
   const [ isValid, setIsValid ] = React.useState(true);
@@ -24,13 +24,16 @@ export function useFormAndValidation(errorClassName, defaulValues, customValidat
     const validStatus = browserValidStatus && (customValidMessage.length === 0);
     setIsValid(validStatus);
 
-    if(e.target.nextSibling) {
-      e.target.nextSibling.textContent = errorMessage;
-      if(errorMessage) {
-        e.target.nextSibling.classList.add(errorClassName);
-      } 
-      else {
-        e.target.nextSibling.classList.remove(errorClassName);
+    const errorContainer = useParentSibling ? e.target.parentElement.nextSibling : e.target.nextSibling;
+    if(errorContainer) {
+      errorContainer.textContent = errorMessage;
+      if(errorClassName) {
+        if(errorMessage) {
+          errorContainer.classList.add(errorClassName);
+        } 
+        else {
+          errorContainer.classList.remove(errorClassName);
+        }
       }
     }
 

@@ -8,7 +8,7 @@ import './HelloForm.css'
 
 export  default function HelloForm({name, title, buttonText, info, linkText, linkAddr, validate, onSubmit, successLink, onSuccess, children}) {
   const {values, handleChange, errors, isValid, setValues, resetForm} = useFormAndValidation('input__error_visible', undefined, validate);
-  const subminButtonRef = React.useRef();
+  const submitButtonRef = React.useRef();
 
   const [errorMessage, setErrorMessage] = React.useState('')
 
@@ -16,7 +16,7 @@ export  default function HelloForm({name, title, buttonText, info, linkText, lin
 
   function handleFormChange(evt) {
     const validStatus = handleChange(evt);
-    subminButtonRef.current.disabled = !validStatus;
+    submitButtonRef.current.disabled = !validStatus;
     setErrorMessage('');
     console.log(`Valid: ${validStatus}`)
     // for(let k in values) console.log(values[k]);
@@ -24,13 +24,13 @@ export  default function HelloForm({name, title, buttonText, info, linkText, lin
 
   function handleFormSubmit(evt) {
     evt.preventDefault();
-    
-    subminButtonRef.current.disabled = true;
+
+    submitButtonRef.current.disabled = true;
     onSubmit(evt, values)
       .then((data) => {
         resetForm();
         setErrorMessage('');
-        subminButtonRef.current.disabled = false;
+        submitButtonRef.current.disabled = false;
         if(onSuccess) {
           onSuccess(data)
         }
@@ -39,7 +39,7 @@ export  default function HelloForm({name, title, buttonText, info, linkText, lin
         }
       })
       .catch(() => {
-        subminButtonRef.current.disabled = true;
+        submitButtonRef.current.disabled = true;
         setErrorMessage('При отправке данных произошла ошибка')    
       })
   }
@@ -52,7 +52,7 @@ export  default function HelloForm({name, title, buttonText, info, linkText, lin
       </div>
       <div className='hello-form__button-container'>
         <p className='hello-form__error'>{errorMessage}</p>
-        <button ref={subminButtonRef} className='hello-form__submit' type='submit'>{buttonText}</button>
+        <button ref={submitButtonRef} className='hello-form__submit' type='submit'>{buttonText}</button>
         <p className='hello-form__info'>{info + ' '}<Link className='hello-form__link' to={linkAddr}>{linkText}</Link></p>
       </div>
     </form>

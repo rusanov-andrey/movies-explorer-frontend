@@ -8,7 +8,8 @@ import './Login.css'
 import { AppContext } from '../../contexts/AppContext';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
-import { validateEmail } from '../../validators/emailValidator'
+import { validateName } from '../../validators/nameValidator';
+import { validateEmail } from '../../validators/emailValidator';
 import { login } from './LoginApi';
 
 
@@ -25,6 +26,10 @@ export  default function Login() {
   function validate(name, value) {
     if(name === 'email') {
       return validateEmail(value);
+    }
+
+    if(name === 'name') {
+      return validateName(value);
     }
 
     return '';

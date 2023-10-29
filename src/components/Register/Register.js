@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import HelloForm from '../HelloForm/HelloForm';
 import Input from '../Input/Input';
@@ -7,21 +8,41 @@ import './Register.css'
 
 import { AppContext } from '../../contexts/AppContext';
 
-import { registerUser } from './RegisterApi';
+import { registerUser, login } from './RegisterApi';
+import { validateName } from '../../validators/nameValidator';
 import { validateEmail } from '../../validators/emailValidator'
 
 export  default function Register() {
   const { mainApi } = React.useContext(AppContext);
+  const navigate = useNavigate();
+
+  let email = null;
+  let password = null;
 
   function onSubmit(evt, values) {
+    email = values.email;
+    password = values.password;
+
     evt.preventDefault();
     console.log(values.email, values.password, values.name);
     return registerUser(mainApi, values.email, values.password, values.name);
   }
 
+  function onSuccess(data) {
+    login(mainApi, email, password)
+      .then(() => {
+        navigate('/movies');
+      })
+      .catch(err => console.log);
+  }
+
   function validate(name, value) {
     if(name === 'email') {
       return validateEmail(value);
+    }
+
+    if(name === 'name') {
+      return validateName(value);
     }
 
     return '';
@@ -38,7 +59,7 @@ export  default function Register() {
             linkAddr='/signin' 
             validate={validate} 
             onSubmit={onSubmit}
-            successLink='/signin'
+            onSuccess={onSuccess}
         >
         <Input title='Имя' type='text' name='name' placeholder='Витя' minLength={2} maxLength={30} required={true}/>
         <Input title='E-mail' type='email' name='email' placeholder='your@mail.addr' required={true}/>
