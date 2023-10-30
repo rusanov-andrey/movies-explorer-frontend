@@ -52,7 +52,7 @@ export  default function Login() {
             linkAddr='/signup' 
             validate={validate} 
             onSubmit={onSubmit}
-            successLink='/'
+            successLink='/movies'
             onSuccess={onSuccess}
         >
         <Input title='E-mail' type='email' name='email' placeholder='your@mail.addr' required={true}/>

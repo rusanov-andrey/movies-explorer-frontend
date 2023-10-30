@@ -23,7 +23,7 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(4, calc((100% - 3*var(--gap_x))/4));
-  grid-auto-rows: auto;
+  grid-auto-rows: 1fr;
   gap: 38px var(--gap_x);
 
   list-style: none;

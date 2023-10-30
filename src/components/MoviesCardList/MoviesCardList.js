@@ -1,24 +1,96 @@
+import React from 'react';
+
 import MoviesCard from '../MoviesCard/MoviesCard';
 
 import './MoviesCardList.css'
 
-import pic001 from '../../images/001.png'
-import pic002 from '../../images/002.png'
-import pic003 from '../../images/003.png'
-import pic004 from '../../images/004.png'
-import pic005 from '../../images/005.png'
+function renderCardList(saved, moviesList, onLike, onDislike) {
+  if(moviesList.length === 0) {
+    return (
+      <div>Ничего не найдено</div>
+    );
+  }
 
-export  default function MoviesCardList({saved}) {
+  return (
+    <ul className='cardlist__container'>
+      {moviesList.map(movie => (
+        <MoviesCard 
+          key={movie.id} 
+          _id={movie.id} 
+          imgUrl={movie.imageUrl} 
+          caption={movie.nameRU} 
+          duration={movie.duration} 
+          saved={saved} 
+          liked={movie.liked} 
+          trailerUrl={movie.trailerUrl} 
+          onLike={onLike} 
+          onDislike={onDislike}
+        />
+      ))}
+    </ul>
+  );
+
+}
+
+function calculateColumnAmount() {
+  if(window.innerWidth > 1000)
+    return 4;
+  
+  if(window.innerWidth > 800)
+    return 3;
+
+  if(window.innerWidth > 500)
+    return 2;
+  
+  return 1;
+}
+
+function calculateStartLineAmount() {
+  if(window.innerWidth > 500)
+    return 4;
+  
+  return 5;
+}
+
+function calculateMoreLineAmount() {
+  if(window.innerWidth > 500)
+    return 1;
+  
+  return 2;
+}
+
+
+export default function MoviesCardList({saved, moviesList, onLike, onDislike}) {
+  const [columnsAmount, setColumnsAmount] = React.useState(calculateColumnAmount());
+  const [viewList, setViewList] = React.useState(moviesList.slice(0, calculateStartLineAmount()*columnsAmount));
+  const  buttonIsVisible = (viewList.length < moviesList.length);
+
+  function onResize() {
+    setColumnsAmount(calculateColumnAmount(window.innerWidth));
+  }
+
+  function onMore(evt) {
+    const currentLength = viewList.length;
+    const columnsAmount = calculateColumnAmount();
+    const nextLength = (Math.floor(currentLength / columnsAmount) + calculateMoreLineAmount()) * columnsAmount;
+
+    setViewList(moviesList.slice(0,nextLength));
+  }
+
+  React.useEffect(() => {
+    function clearEffect() {
+      window.removeEventListener('resize', onResize);
+    }
+
+    window.addEventListener('resize', onResize);
+
+    return clearEffect;
+  });
+
   return (
     <main className='cardlist'>
-      <ul className='cardlist__container'>
-        <MoviesCard img={pic001} caption='33 слова о дизайне' duration='100' saved={saved} liked={false}/>
-        <MoviesCard img={pic002} caption='Киноальманах «100 лет дизайна»' duration='50' saved={saved} liked={false}/>
-        <MoviesCard img={pic003} caption='В погоне за Бенкси' duration='100' saved={saved} liked={true}/>
-        <MoviesCard img={pic004} caption='Баския: Взрыв реальности' duration='1000' saved={saved} liked={false}/>
-        <MoviesCard img={pic005} caption='Бег это свобода' duration='100' saved={saved} liked={false}/>
-      </ul>
-      { !saved && <button className='cardlist__more'>Ещё</button> }
+      { renderCardList(saved, viewList, onLike, onDislike) }
+      { !saved && buttonIsVisible && <button className='cardlist__more' onClick={onMore}>Ещё</button> }
     </main>
   );
 }

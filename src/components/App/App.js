@@ -15,11 +15,13 @@ import { CurrentUserContext } from '../../contexts/CurrentUserContext'
 import { DEFAULT_USER } from '../../utils/constants'
 
 import MainApi from '../../utils/MainApi';
+import MoviesApi from '../../utils/MoviesApi';
 
 import './App.css';
 
 
 const mainApi = new MainApi();
+const cloudApi = new MoviesApi();
 
 function App() {
   const [currentUser, setCurrentUser] = React.useState(DEFAULT_USER);
@@ -44,7 +46,7 @@ function App() {
 
   return (
     <div className='app-container'>
-      <AppContext.Provider value={{ mainApi, loginAttempt, setLoginAttempt }}>
+      <AppContext.Provider value={{ mainApi, cloudApi, loginAttempt, setLoginAttempt }}>
       <CurrentUserContext.Provider value={ {currentUser, setCurrentUser} }>
         <BrowserRouter>
           <Routes>
