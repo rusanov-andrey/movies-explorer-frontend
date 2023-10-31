@@ -73,6 +73,7 @@ export  default function Profile() {
 
   function onLogout() {
     console.log('logout');
+    localStorage.clear();
     logout(mainApi)
       .then(() => {
         console.log('logout ok');

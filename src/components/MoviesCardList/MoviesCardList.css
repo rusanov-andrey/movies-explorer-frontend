@@ -49,6 +49,15 @@
   opacity: 0.8;
 }
 
+.cardlist__notfound {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+
+  font: 400 14px/1.2 Inter, Arial, sans-serif;
+}
+
 
 @media screen and (max-width: 1000px) {
   .cardlist {

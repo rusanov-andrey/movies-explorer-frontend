@@ -6,8 +6,8 @@ import './SavedMovies.css'
 export  default function SavedMovies() {
   return (
     <div className='saved-movies'>
-      <SearchForm />
-      <MoviesCardList saved={true}/>
+      <SearchForm fileName={''} shortTime={false} onSubmit={() => 1}/>
+      <MoviesCardList saved={true} moviesList={[]} onLike={() => 1} onDislike={() => 1}/>
     </div>
   );
 }

@@ -7,7 +7,7 @@ import './MoviesCardList.css'
 function renderCardList(saved, moviesList, onLike, onDislike) {
   if(moviesList.length === 0) {
     return (
-      <div>Ничего не найдено</div>
+      <div className='cardlist__notfound'>Фильмы по запросу не найдены</div>
     );
   }
 
@@ -87,6 +87,20 @@ export default function MoviesCardList({saved, moviesList, onLike, onDislike}) {
     return clearEffect;
   });
 
+  const hash = moviesList.map(movie => movie.id).join('||');
+
+  React.useEffect(() => {
+    setViewList(moviesList.slice(0, viewList.length));
+  }, [moviesList]);
+
+  React.useEffect(() => {
+    console.log(`Reload view by hash`);
+    const columnsAmount = calculateColumnAmount();
+    setColumnsAmount(columnsAmount);
+    setViewList(moviesList.slice(0, calculateStartLineAmount()*columnsAmount));
+  }, [hash]);
+
+  console.log(`MoviesCardList RENDER ${viewList.length} ${JSON.stringify(viewList.map((x) => {return {id:x.id, liked:x.liked}}))}`)
   return (
     <main className='cardlist'>
       { renderCardList(saved, viewList, onLike, onDislike) }
