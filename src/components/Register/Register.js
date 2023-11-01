@@ -7,6 +7,7 @@ import Input from '../Input/Input';
 import './Register.css'
 
 import { AppContext } from '../../contexts/AppContext';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
 import { registerUser, login } from './RegisterApi';
 import { validateName } from '../../validators/nameValidator';
@@ -14,6 +15,7 @@ import { validateEmail } from '../../validators/emailValidator'
 
 export  default function Register() {
   const { mainApi } = React.useContext(AppContext);
+  const { currentUser, setCurrentUser } = React.useContext(CurrentUserContext)
   const navigate = useNavigate();
 
   let email = null;
@@ -31,7 +33,8 @@ export  default function Register() {
   function onSuccess(data) {
     login(mainApi, email, password)
       .then(() => {
-        navigate('/movies');
+        setCurrentUser(data);
+        setTimeout(() => {navigate('/movies')}, 0);
       })
       .catch(err => console.log);
   }
