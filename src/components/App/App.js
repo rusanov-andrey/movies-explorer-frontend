@@ -1,6 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
+
 import PageAbout from '../PageAbout/PageAbout';
 import PageMovies from '../PageMovies/PageMovies';
 import PageSavedMovies from '../PageSavedMovies/PageSavedMovies';
@@ -51,9 +53,24 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<PageAbout authorized={authorized}/>} />
-            <Route path='/movies' element={<PageMovies/>} />
-            <Route path='/saved-movies' element={<PageSavedMovies/>} />
-            <Route path='/profile' element={<PageProfile/>} />
+            <Route path='/movies' element={
+              <ProtectedRoute 
+                component={PageMovies}
+                loggedIn={authorized}
+              />
+            }/>
+            <Route path='/saved-movies' element={
+              <ProtectedRoute 
+                component={PageSavedMovies}
+                loggedIn={authorized}
+              />
+            }/>
+            <Route path='/profile' element={
+              <ProtectedRoute 
+                component={PageProfile}
+                loggedIn={authorized}
+              />
+            }/>
             <Route path='/signup' element={<PageRegister/>} />
             <Route path='/signin' element={<PageLogin/>} />
             <Route path='*' element={<NotFound/>} />
