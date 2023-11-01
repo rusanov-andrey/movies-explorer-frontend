@@ -49,7 +49,7 @@ export  default function Profile() {
 
   function handleFormChange(evt) {
     const validStatus = handleChange(evt);
-    submitButtonRef.current.disabled = (!validStatus) && (currentUser.name !== values.name) && (currentUser.email !== values.email);
+    submitButtonRef.current.disabled = (!validStatus);
     setErrorMessage('');
     console.log(`Valid: ${validStatus}`)
     // for(let k in values) console.log(values[k]);
@@ -94,6 +94,12 @@ export  default function Profile() {
     setEditMode(true);
     setTimeout(() => { submitButtonRef.current.disabled = true;}, 0);
   }
+
+  React.useEffect(() => {
+    if(submitButtonRef && submitButtonRef.current) {
+      submitButtonRef.current.disabled = (submitButtonRef.current.disabled || ((currentUser.name === values.name) && (currentUser.email === values.email)));
+    }
+  }, [values]);
 
 
   function renderForm() {
