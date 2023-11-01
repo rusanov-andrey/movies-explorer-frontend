@@ -28,8 +28,9 @@ const cloudApi = new MoviesApi();
 function App() {
   const [currentUser, setCurrentUser] = React.useState(DEFAULT_USER);
   const [loginAttempt, setLoginAttempt] = React.useState(0);
+  const [authorizationDefined, setAuthorizationDefined] = React.useState(false);
 
-  const authorized = (currentUser.email !== '');
+  let authorized = (currentUser.email !== '');
 
   console.log(`loginAttempt ${loginAttempt}`);
   
@@ -39,6 +40,7 @@ function App() {
       .then((profileData) => {
         console.log(`getProfile ${JSON.stringify(profileData)}`)
         setCurrentUser(profileData);
+        setAuthorizationDefined(true);
       })
       .catch((errorData) => {
         console.log(`getProfile ERROR ${JSON.stringify(errorData)}`)
@@ -46,6 +48,13 @@ function App() {
       })
   }, [loginAttempt]);
 
+  if(!authorizationDefined) {
+    return (
+      <div className='app-container'></div>
+    );
+  }
+
+  console.log(`authorized ${authorized}`);
   return (
     <div className='app-container'>
       <AppContext.Provider value={{ mainApi, cloudApi, loginAttempt, setLoginAttempt }}>
