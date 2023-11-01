@@ -44,6 +44,12 @@ export  default function HelloForm({name, title, buttonText, info, linkText, lin
       })
   }
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      submitButtonRef.current.disabled = true;
+    }, 0);
+  }, []);
+
   return (
     <form className='hello-form' name={name} method='POST' noValidate onSubmit={handleFormSubmit} onChange={handleFormChange}>
       <div className='hello-form__field-container'>
