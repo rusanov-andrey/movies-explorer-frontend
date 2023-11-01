@@ -4,10 +4,10 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 
 import './MoviesCardList.css'
 
-function renderCardList(saved, moviesList, onLike, onDislike) {
+function renderCardList(saved, moviesList, onLike, onDislike, absentText) {
   if(moviesList.length === 0) {
     return (
-      <div className='cardlist__notfound'>Фильмы по запросу не найдены</div>
+      <div className='cardlist__notfound'>{absentText}</div>
     );
   }
 
@@ -60,7 +60,7 @@ function calculateMoreLineAmount() {
 }
 
 
-export default function MoviesCardList({saved, moviesList, onLike, onDislike}) {
+export default function MoviesCardList({saved, moviesList, onLike, onDislike, absentText}) {
   const [columnsAmount, setColumnsAmount] = React.useState(calculateColumnAmount());
   const [viewList, setViewList] = React.useState(moviesList.slice(0, calculateStartLineAmount()*columnsAmount));
   const  buttonIsVisible = (viewList.length < moviesList.length);
@@ -103,7 +103,7 @@ export default function MoviesCardList({saved, moviesList, onLike, onDislike}) {
   console.log(`MoviesCardList RENDER ${viewList.length} ${JSON.stringify(viewList.map((x) => {return {id:x.id, liked:x.liked}}))}`)
   return (
     <main className='cardlist'>
-      { renderCardList(saved, viewList, onLike, onDislike) }
+      { renderCardList(saved, viewList, onLike, onDislike, absentText) }
       { !saved && buttonIsVisible && <button className='cardlist__more' onClick={onMore}>Ещё</button> }
     </main>
   );

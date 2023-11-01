@@ -114,8 +114,18 @@
   font: 400 11px/1.2 Inter, Arial, sans-serif;
 }
 
+.profile__result {
+  margin: 22px 0 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: var(--color-accent);
+  font: 400 14px/1.2 Inter, Arial, sans-serif;
+  min-height: 18px;
+}
+
 .profile__edit-button {
-  margin: 203px 0 0;
+  margin: 163px 0 0;
   padding: 0;
   box-sizing: border-box;
 

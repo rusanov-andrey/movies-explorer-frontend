@@ -36,6 +36,8 @@ export  default function Profile() {
   const [editMode, setEditMode] = React.useState(false);
   const [errorMessage, setErrorMessage] = React.useState('')
 
+  const [result, setResult] = React.useState('');
+
   const navigate = useNavigate();
 
   React.useEffect(() => {
@@ -47,7 +49,7 @@ export  default function Profile() {
 
   function handleFormChange(evt) {
     const validStatus = handleChange(evt);
-    submitButtonRef.current.disabled = !validStatus;
+    submitButtonRef.current.disabled = (!validStatus) && (currentUser.name !== values.name) && (currentUser.email !== values.email);
     setErrorMessage('');
     console.log(`Valid: ${validStatus}`)
     // for(let k in values) console.log(values[k]);
@@ -64,6 +66,7 @@ export  default function Profile() {
         submitButtonRef.current.disabled = false;
         setCurrentUser(data)
         setEditMode(false);
+        setResult('Профиль успешно обновлён');
       })
       .catch(() => {
         submitButtonRef.current.disabled = true;
@@ -86,6 +89,11 @@ export  default function Profile() {
       });
   }
 
+  function handleEdit(evt) {
+    setResult('');
+    setEditMode(true);
+    setTimeout(() => { submitButtonRef.current.disabled = true;}, 0);
+  }
 
 
   function renderForm() {
@@ -127,7 +135,8 @@ export  default function Profile() {
             <div className='profile__info-title'>E-mail</div>
             <div className='profile__info-data'>{currentUser.email}</div>
           </div>
-          <input className='profile__edit-button' type='button' value='Редактировать' onClick={() => setEditMode(true)}/>
+          <p className='profile__result'>{result}</p>
+          <input className='profile__edit-button' type='button' value='Редактировать' onClick={handleEdit}/>
           <input className='profile__exit-button' type='button' value='Выйти из акаунта' onClick={onLogout}/>
         </div>
       </div>

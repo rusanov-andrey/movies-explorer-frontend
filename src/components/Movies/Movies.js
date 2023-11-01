@@ -11,6 +11,9 @@ import { getMovies, like, dislike, getSavedMovies } from './MoviesApi'
 import { MovieData } from '../../utils/MovieData';
 import { CLOUD_URL } from '../../utils/constants';
 
+const DEFAULT_ABSENT_TEXT = 'Фильмы по запросу не найдены';
+const ERROR_ABSENT_TEXT = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
+
 export default function Movies() {
   const { mainApi, cloudApi } = React.useContext(AppContext);
 
@@ -20,6 +23,8 @@ export default function Movies() {
   const [moviesFilteredList, setMoviesFilteredList] = React.useState(undefined);
   const [savedMoviesList, setSavedMoviesList] = React.useState(undefined);
   const [movieDataIsLoaded, setMovieDataIsLoaded] = React.useState(false);
+
+  const [absentText, setAbsentText] = React.useState(DEFAULT_ABSENT_TEXT);
 
   function updateLikes(allMovies, savedMovies) {
     const newMovieList = [...allMovies];
@@ -56,7 +61,7 @@ export default function Movies() {
     //setMoviesFilteredList(moviesList.filter(movie => (~(movie.nameRU.toLowerCase().indexOf(filmName.toLowerCase())) && ((!shortTime) || (movie.duration < 45)))));
     console.log(`filterMovies ${filmName} ${shortTime}`)
     console.log(`filterMovies ${JSON.stringify(allMovies)}`)
-    let res = allMovies.filter(movie => (~(movie.nameRU.toLowerCase().indexOf(filmName.toLowerCase())) && ((!shortTime) || (movie.duration < 45))));
+    const res = allMovies.filter(movie => (~(movie.nameRU.toLowerCase().indexOf(filmName.toLowerCase())) && ((!shortTime) || (movie.duration < 45))));
     console.log(`filterMovies ${JSON.stringify(res)}`)
     setMoviesFilteredList(res);
     return res;
@@ -81,11 +86,13 @@ export default function Movies() {
             save(filmName, shortTime, res);
         }
 
+        setAbsentText(DEFAULT_ABSENT_TEXT);
         setPreloader(false);
         return true;
       })
       .catch(err => {
         console.log(err);
+        setAbsentText(ERROR_ABSENT_TEXT);
         return false;
       })
   }
@@ -219,7 +226,7 @@ export default function Movies() {
   return (
     <div className='movies'>
       <SearchForm filmName={filmName} shortTime={shortTime} onSubmit={handleSearch}/>
-      {moviesFilteredList && <MoviesCardList saved={false} moviesList={moviesFilteredList} onLike={onLike} onDislike={onDislike}/>}
+      {moviesFilteredList && <MoviesCardList saved={false} moviesList={moviesFilteredList} onLike={onLike} onDislike={onDislike} absentText={absentText}/>}
       {preloader && <Preloader />}
     </div>
   );
