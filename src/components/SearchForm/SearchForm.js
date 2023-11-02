@@ -49,6 +49,11 @@ export  default function SearchForm({filmName, shortTime, onSubmit, searchResult
     setSubmited(searchResultsWasLoaded);
   }, [searchResultsWasLoaded]);
 
+  React.useEffect(() => {
+    setShortTime(shortTime);
+  }, [shortTime]);
+
+  console.log(`SearchForm RENDER ${values.film} ${_shortTime}`);
   return (
     <form className='search-form' name='movie' method='POST'>
       <div className='search-form__container'>

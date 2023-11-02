@@ -145,8 +145,8 @@ export default function Movies() {
 
   function saveToLocalStorage(filmName, shortTime, moviesFilteredList) {
     console.log(`saveToLocalStorage`);
-    filmName && localStorage.setItem('MovieName', filmName);
-    shortTime && localStorage.setItem('ShortTime', shortTime);
+    (filmName !== undefined) && localStorage.setItem('MovieName', filmName);
+    (shortTime !== undefined) && localStorage.setItem('ShortTime', shortTime);
     localStorage.setItem('FilteredMovie', JSON.stringify(moviesFilteredList));
   }
 
@@ -156,14 +156,20 @@ export default function Movies() {
     if(strData)
       setLoadedFromStorage(true);
     
+    let shortTime = localStorage.getItem('ShortTime');
+    if(shortTime !== undefined) {
+      shortTime = (shortTime === 'true');
+    }
+
     return ({
       movieName: localStorage.getItem('MovieName'),
-      shortTime: localStorage.getItem('ShortTime'),
+      shortTime: shortTime,
       moviesFilteredList: moviesFilteredList,
     });
   }
 
   function handleSearch(filmName, shortTime) {
+    console.log(`Movies::handleSearch ${filmName} ${shortTime}`);
     setFilmName(filmName);
     setShortTime(shortTime);
 
@@ -171,6 +177,9 @@ export default function Movies() {
       const currentFilteredMoviesList = filterMovies(moviesList, filmName, shortTime);
       saveToLocalStorage(filmName, shortTime, currentFilteredMoviesList)
       return;
+    }
+    else {
+      saveToLocalStorage(filmName, shortTime, loadFromLocalStorage().moviesFilteredList);
     }
 
     console.log(`Loadin movies`);
@@ -180,10 +189,10 @@ export default function Movies() {
 
   React.useEffect(() => {
     const res = loadFromLocalStorage();
-    if(res.movieName)
+    if(res.movieName !== undefined)
       setFilmName(res.movieName);
 
-    if(res.shortTime)
+    if(res.shortTime !== undefined)
       setShortTime(res.shortTime);
 
     if(res.moviesFilteredList !== undefined) {
@@ -195,7 +204,7 @@ export default function Movies() {
   }, []);
 
   
-  console.log(`Movies RENDER ${JSON.stringify(moviesFilteredList)}`);
+  console.log(`Movies RENDER ${filmName} ${shortTime} ${JSON.stringify(moviesFilteredList)}`);
   return (
     <div className='movies'>
       <SearchForm filmName={filmName} shortTime={shortTime} onSubmit={handleSearch} searchResultsWasLoaded={loadedFromStorage}/>
