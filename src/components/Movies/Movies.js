@@ -58,7 +58,6 @@ export default function Movies() {
   }
 
   function filterMovies(allMovies, filmName, shortTime) {
-    //setMoviesFilteredList(moviesList.filter(movie => (~(movie.nameRU.toLowerCase().indexOf(filmName.toLowerCase())) && ((!shortTime) || (movie.duration < 45)))));
     console.log(`filterMovies ${filmName} ${shortTime}`)
     console.log(`filterMovies ${JSON.stringify(allMovies)}`)
     const res = allMovies.filter(movie => (~(movie.nameRU.toLowerCase().indexOf(filmName.toLowerCase())) && ((!shortTime) || (movie.duration < 45))));
@@ -112,10 +111,6 @@ export default function Movies() {
         return getSavedMovies(mainApi);
       })
       .then((savedMovies) => {
-        /*const savedMoviesDataList = updateSavedMoviewModel(savedMovies);
-        const updatedAllMoviesDataList = updateLikes(moviesList, savedMoviesDataList);
-        setSavedMoviesList(savedMoviesDataList);
-        setMoviesList(updatedAllMoviesDataList);*/
         const filteredList = updateAll(savedMovies, filmName, shortTime);
         saveToLocalStorage(filmName, shortTime, filteredList);
         return true;
@@ -137,10 +132,6 @@ export default function Movies() {
         return getSavedMovies(mainApi);
       })
       .then((savedMovies) => {
-        /*const savedMoviesDataList = updateSavedMoviewModel(savedMovies);
-        const updatedAllMoviesDataList = updateLikes(moviesList, savedMoviesDataList);
-        setSavedMoviesList(savedMoviesDataList);
-        setMoviesList(updatedAllMoviesDataList);*/
         const filteredList = updateAll(savedMovies, filmName, shortTime);
         saveToLocalStorage(filmName, shortTime, filteredList);
         return true;
@@ -188,28 +179,6 @@ export default function Movies() {
   }
 
   React.useEffect(() => {
-    /*Promise.all([getMovies(cloudApi), getSavedMovies(mainApi)])
-      .then(([cloudList, savedList]) => {
-        /*console.log(`Promise.all([getMovies(cloudApi), getSavedMovies(mainApi)])`);
-        console.log(`cloudList = ${JSON.stringify(cloudList)}`);
-        console.log(`savedList = ${JSON.stringify(savedList)}`);
-        const moviesDataList = cloudList.map((movie) => (new MovieData()).loadFromCloudData(CLOUD_URL, movie));
-        const savedMoviesDataList = savedList.map((movie) => (new MovieData(true)).loadFromDBData(movie));
-        console.log(`moviesDataList = ${JSON.stringify(moviesDataList)}`);
-        console.log(`savedMoviesDataList = ${JSON.stringify(savedMoviesDataList)}`);
-        const updatedAllMoviesDataList = updateLikes(moviesDataList, savedMoviesDataList)
-        console.log(`updatedAllMoviesDataList = ${JSON.stringify(updatedAllMoviesDataList)}`);
-        setSavedMoviesList(savedMoviesDataList);
-        setTimeout( () => setMoviesList(updatedAllMoviesDataList), 5000);* /
-
-        const savedMoviesDataList = updateSavedMoviewModel(savedList);
-        const updatedAllMoviesDataList = updateMoviewModel(cloudList, savedMoviesDataList);
-        setSavedMoviesList(savedMoviesDataList);
-        setMovieDataIsLoaded(true);
-        setTimeout( () => setMoviesList(updatedAllMoviesDataList), 5000);
-
-      })
-      .catch(err => console.log);*/
     const res = loadFromLocalStorage();
     if(res.movieName)
       setFilmName(res.movieName);

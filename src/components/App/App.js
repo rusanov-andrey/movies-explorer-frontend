@@ -45,6 +45,7 @@ function App() {
       .catch((errorData) => {
         console.log(`getProfile ERROR ${JSON.stringify(errorData)}`)
         setCurrentUser(DEFAULT_USER);
+        setAuthorizationDefined(true);
       })
   }, [loginAttempt]);
 

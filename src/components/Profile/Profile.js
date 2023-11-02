@@ -52,7 +52,6 @@ export  default function Profile() {
     submitButtonRef.current.disabled = (!validStatus);
     setErrorMessage('');
     console.log(`Valid: ${validStatus}`)
-    // for(let k in values) console.log(values[k]);
   }
 
   function handleFormSubmit(evt) {

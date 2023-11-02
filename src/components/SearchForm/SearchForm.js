@@ -33,8 +33,6 @@ export  default function SearchForm({filmName, shortTime, onSubmit, searchResult
     if(submited) {
       onSubmit(values.film, value);
     }
-    //if(isValid)
-    //  submitButtonRef.current.disabled = false;
   }
 
   React.useEffect(() => {
