@@ -65,8 +65,13 @@ export default function MoviesCardList({saved, moviesList, onLike, onDislike, ab
   const [viewList, setViewList] = React.useState(moviesList.slice(0, calculateStartLineAmount()*columnsAmount));
   const  buttonIsVisible = (viewList.length < moviesList.length);
 
+  function restartView() {
+    const columnsAmount = calculateColumnAmount();
+    setColumnsAmount(columnsAmount);
+    setViewList(moviesList.slice(0, calculateStartLineAmount()*columnsAmount));
+  }
   function onResize() {
-    setColumnsAmount(calculateColumnAmount(window.innerWidth));
+    restartView();
   }
 
   function onMore(evt) {
@@ -95,9 +100,7 @@ export default function MoviesCardList({saved, moviesList, onLike, onDislike, ab
 
   React.useEffect(() => {
     console.log(`Reload view by hash`);
-    const columnsAmount = calculateColumnAmount();
-    setColumnsAmount(columnsAmount);
-    setViewList(moviesList.slice(0, calculateStartLineAmount()*columnsAmount));
+    restartView();
   }, [hash]);
 
   console.log(`MoviesCardList RENDER ${viewList.length} ${JSON.stringify(viewList.map((x) => {return {id:x.id, liked:x.liked}}))}`)
