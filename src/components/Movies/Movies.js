@@ -9,10 +9,8 @@ import { AppContext } from '../../contexts/AppContext';
 
 import { getMovies, like, dislike, getSavedMovies } from './MoviesApi'
 import { MovieData } from '../../utils/MovieData';
-import { CLOUD_URL } from '../../utils/constants';
-
-const DEFAULT_ABSENT_TEXT = 'Фильмы по запросу не найдены';
-const ERROR_ABSENT_TEXT = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
+import { CLOUD_URL, SHORT_TIME } from '../../utils/constants';
+import { DEFAULT_ABSENT_TEXT, ERROR_ABSENT_TEXT } from './constants';
 
 export default function Movies() {
   const { mainApi, cloudApi } = React.useContext(AppContext);
@@ -60,7 +58,7 @@ export default function Movies() {
   function filterMovies(allMovies, filmName, shortTime) {
     console.log(`filterMovies ${filmName} ${shortTime}`)
     console.log(`filterMovies ${JSON.stringify(allMovies)}`)
-    const res = allMovies.filter(movie => (~(movie.nameRU.toLowerCase().indexOf(filmName.toLowerCase())) && ((!shortTime) || (movie.duration < 45))));
+    const res = allMovies.filter(movie => (~(movie.nameRU.toLowerCase().indexOf(filmName.toLowerCase())) && ((!shortTime) || (movie.duration < SHORT_TIME))));
     console.log(`filterMovies ${JSON.stringify(res)}`)
     setMoviesFilteredList(res);
     return res;

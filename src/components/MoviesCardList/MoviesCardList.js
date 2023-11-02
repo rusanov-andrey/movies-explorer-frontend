@@ -4,6 +4,12 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 
 import './MoviesCardList.css'
 
+import {
+  COLUMNS_AMOUNT_1000, COLUMNS_AMOUNT_800, COLUMNS_AMOUNT_500, COLUMNS_AMOUNT_NARROW,
+  START_LINE_AMOUNT_500, START_LINE_AMOUNT_NARROW,
+  MORE_LINE_AMOUNT_500, MORE_LINE_AMOUNT_NARROW,
+} from '../../utils/constants';
+
 function renderCardList(saved, moviesList, onLike, onDislike, absentText) {
   if(moviesList.length === 0) {
     return (
@@ -34,29 +40,29 @@ function renderCardList(saved, moviesList, onLike, onDislike, absentText) {
 
 function calculateColumnAmount() {
   if(window.innerWidth > 1000)
-    return 4;
+    return COLUMNS_AMOUNT_1000;
   
   if(window.innerWidth > 800)
-    return 3;
+    return COLUMNS_AMOUNT_800;
 
   if(window.innerWidth > 500)
-    return 2;
+    return COLUMNS_AMOUNT_500;
   
-  return 1;
+  return COLUMNS_AMOUNT_NARROW;
 }
 
 function calculateStartLineAmount() {
   if(window.innerWidth > 500)
-    return 4;
+    return START_LINE_AMOUNT_500;
   
-  return 5;
+  return START_LINE_AMOUNT_NARROW;
 }
 
 function calculateMoreLineAmount() {
   if(window.innerWidth > 500)
-    return 1;
+    return MORE_LINE_AMOUNT_500;
   
-  return 2;
+  return MORE_LINE_AMOUNT_NARROW;
 }
 
 

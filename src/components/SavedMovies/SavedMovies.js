@@ -9,6 +9,8 @@ import { AppContext } from '../../contexts/AppContext';
 import { dislike, getSavedMovies } from './SavedMoviesApi'
 import { MovieData } from '../../utils/MovieData';
 
+import { SHORT_TIME } from '../../utils/constants';
+
 const DEFAULT_ABSENT_TEXT = 'Нет сохранённых фильмов';
 const ERROR_ABSENT_TEXT = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
 
@@ -21,7 +23,7 @@ export  default function SavedMovies() {
   const [absentText, setAbsentText] = React.useState(DEFAULT_ABSENT_TEXT);
 
   function filterMovies(allMovies, filmName, shortTime) {
-    const res = allMovies.filter(movie => (~(movie.nameRU.toLowerCase().indexOf(filmName.toLowerCase())) && ((!shortTime) || (movie.duration < 45))));
+    const res = allMovies.filter(movie => (~(movie.nameRU.toLowerCase().indexOf(filmName.toLowerCase())) && ((!shortTime) || (movie.duration < SHORT_TIME))));
     return res;
   }
 
