@@ -150,9 +150,15 @@ export default function Movies() {
 
   function loadFromLocalStorage() {
     const strData = localStorage.getItem('FilteredMovie');
-    const moviesFilteredList = strData ? JSON.parse(strData) : undefined;
-    if(strData)
-      setLoadedFromStorage(true);
+    let moviesFilteredList = undefined;
+    if(strData) {
+      try {
+        moviesFilteredList = JSON.parse(strData);
+        setLoadedFromStorage(true);
+      } catch(e) {
+        console.log(e);
+      }
+    }
     
     let shortTime = localStorage.getItem('ShortTime');
     if(shortTime !== undefined) {
