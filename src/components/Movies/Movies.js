@@ -150,6 +150,7 @@ export default function Movies() {
 
   const [filmName, setFilmName] = React.useState('');
   const [shortTime, setShortTime] = React.useState(false);
+  const [loadedFromStorage, setLoadedFromStorage] = React.useState(false);
 
   function saveToLocalStorage(filmName, shortTime, moviesFilteredList) {
     console.log(`saveToLocalStorage`);
@@ -161,6 +162,9 @@ export default function Movies() {
   function loadFromLocalStorage() {
     const strData = localStorage.getItem('FilteredMovie');
     const moviesFilteredList = strData ? JSON.parse(strData) : undefined;
+    if(strData)
+      setLoadedFromStorage(true);
+    
     return ({
       movieName: localStorage.getItem('MovieName'),
       shortTime: localStorage.getItem('ShortTime'),
@@ -225,7 +229,7 @@ export default function Movies() {
   console.log(`Movies RENDER ${JSON.stringify(moviesFilteredList)}`);
   return (
     <div className='movies'>
-      <SearchForm filmName={filmName} shortTime={shortTime} onSubmit={handleSearch}/>
+      <SearchForm filmName={filmName} shortTime={shortTime} onSubmit={handleSearch} searchResultsWasLoaded={loadedFromStorage}/>
       {moviesFilteredList && <MoviesCardList saved={false} moviesList={moviesFilteredList} onLike={onLike} onDislike={onDislike} absentText={absentText}/>}
       {preloader && <Preloader />}
     </div>

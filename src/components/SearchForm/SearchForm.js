@@ -6,10 +6,12 @@ import FilterCheckbox from '../FilterCheckbox/FilterCheckbox'
 
 import './SearchForm.css'
 
-export  default function SearchForm({filmName, shortTime, onSubmit }) {
+export  default function SearchForm({filmName, shortTime, onSubmit, searchResultsWasLoaded }) {
   const {values, handleChange, errors, isValid, setValues, resetForm} = useFormAndValidation('', {film: filmName}, undefined, true);
   
   const [_shortTime, setShortTime] = React.useState(shortTime);
+  const [submited, setSubmited] = React.useState(searchResultsWasLoaded === true);
+
   const submitButtonRef = React.useRef();
 
   function handleFormChange(evt) {
@@ -23,17 +25,31 @@ export  default function SearchForm({filmName, shortTime, onSubmit }) {
     submitButtonRef.current.disabled = true;
     console.log(`search handleFormSubmit ${JSON.stringify(values)}, ${_shortTime}`);
     onSubmit(values.film, _shortTime);
+    setSubmited(true);
   }
 
   function handleShortTimeChanged(value) {
     setShortTime(value);
-    if(isValid)
-      submitButtonRef.current.disabled = false;
+    if(submited) {
+      onSubmit(values.film, value);
+    }
+    //if(isValid)
+    //  submitButtonRef.current.disabled = false;
   }
 
   React.useEffect(() => {
     setValues({...values, film: filmName})
   }, [filmName]);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      submitButtonRef.current.disabled = true;
+    }, 0);
+  }, [])
+
+  React.useEffect(() => {
+    setSubmited(searchResultsWasLoaded);
+  }, [searchResultsWasLoaded]);
 
   return (
     <form className='search-form' name='movie' method='POST'>
