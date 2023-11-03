@@ -23,7 +23,7 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(4, calc((100% - 3*var(--gap_x))/4));
-  grid-auto-rows: auto;
+  grid-auto-rows: 1fr;
   gap: 38px var(--gap_x);
 
   list-style: none;
@@ -47,6 +47,15 @@
 }
 .cardlist__more:hover {
   opacity: 0.8;
+}
+
+.cardlist__notfound {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+
+  font: 400 14px/1.2 Inter, Arial, sans-serif;
 }
 
 

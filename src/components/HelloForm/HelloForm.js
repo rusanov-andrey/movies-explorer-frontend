@@ -1,23 +1,53 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useFormAndValidation } from '../../hooks/useFormAndValidation'
+import { useNavigate } from 'react-router-dom';
+
 
 import './HelloForm.css'
 
-export  default function HelloForm({name, title, buttonText, info, linkText, linkAddr, onSubmit, children}) {
-  const {values, handleChange, errors, isValid, setValues, resetForm} = useFormAndValidation('input__error_visible');
-  const subminButtonRef = React.useRef();
+export  default function HelloForm({name, title, buttonText, info, linkText, linkAddr, validate, onSubmit, successLink, onSuccess, children}) {
+  const {values, handleChange, errors, isValid, setValues, resetForm} = useFormAndValidation('input__error_visible', undefined, validate);
+  const submitButtonRef = React.useRef();
+
+  const [errorMessage, setErrorMessage] = React.useState('')
+
+  const navigate = useNavigate();
 
   function handleFormChange(evt) {
     const validStatus = handleChange(evt);
-    subminButtonRef.current.disabled = !validStatus;
+    submitButtonRef.current.disabled = !validStatus;
+    setErrorMessage('');
     console.log(`Valid: ${validStatus}`)
   }
 
   function handleFormSubmit(evt) {
-    onSubmit(evt);
-    resetForm();
+    evt.preventDefault();
+
+    submitButtonRef.current.disabled = true;
+    onSubmit(evt, values)
+      .then((data) => {
+        resetForm();
+        setErrorMessage('');
+        submitButtonRef.current.disabled = false;
+        if(onSuccess) {
+          onSuccess(data)
+        }
+        if(successLink) {
+          navigate(successLink)
+        }
+      })
+      .catch(() => {
+        submitButtonRef.current.disabled = true;
+        setErrorMessage('При отправке данных произошла ошибка')    
+      })
   }
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      submitButtonRef.current.disabled = true;
+    }, 0);
+  }, []);
 
   return (
     <form className='hello-form' name={name} method='POST' noValidate onSubmit={handleFormSubmit} onChange={handleFormChange}>
@@ -26,7 +56,8 @@ export  default function HelloForm({name, title, buttonText, info, linkText, lin
         {children}
       </div>
       <div className='hello-form__button-container'>
-        <button ref={subminButtonRef} className='hello-form__submit' type='submit'>{buttonText}</button>
+        <p className='hello-form__error'>{errorMessage}</p>
+        <button ref={submitButtonRef} className='hello-form__submit' type='submit'>{buttonText}</button>
         <p className='hello-form__info'>{info + ' '}<Link className='hello-form__link' to={linkAddr}>{linkText}</Link></p>
       </div>
     </form>
