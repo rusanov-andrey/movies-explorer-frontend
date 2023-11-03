@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
+import CustomRedirect from '../CustomRedirect/CustomRedirect';
 
 import PageAbout from '../PageAbout/PageAbout';
 import PageMovies from '../PageMovies/PageMovies';
@@ -81,8 +82,20 @@ function App() {
                 loggedIn={authorized}
               />
             }/>
-            <Route path='/signup' element={<PageRegister/>} />
-            <Route path='/signin' element={<PageLogin/>} />
+            <Route path='/signup' element={
+              <CustomRedirect
+                component={PageRegister} 
+                needRedirect={authorized}
+                redirectLink='/'
+              />
+            }/>
+            <Route path='/signin' element={
+              <CustomRedirect
+                component={PageLogin} 
+                needRedirect={authorized}
+                redirectLink='/movies'
+              />
+            }/>
             <Route path='*' element={<NotFound/>} />
           </Routes>
         </BrowserRouter>
